@@ -1,0 +1,55 @@
+---
+name: University of Bath
+description: University of Bath public developer/API footprint review for APIs.json cataloging.
+url: https://raw.githubusercontent.com/api-evangelist/university-of-bath/refs/heads/main/review.yml
+created: '2026-06-03'
+modified: '2026-06-03'
+reviews:
+  - date: '2026-06-03'
+    rating: 2
+    summary: >-
+      The University of Bath has no commercial or openly documented production API
+      program. Its verifiable machine-readable footprint is scholarly-metadata
+      oriented: a live Elsevier Pure OAI-PMH endpoint (confirmed via Identify,
+      Pure 5.33.3-3) and an EPrints 3.4 Research Data Archive offering OAI-PMH plus
+      a REST/feeds interface. The library runs Ex Libris Alma/Primo (public Primo
+      front end resolves; programmatic Primo APIs require an Ex Libris key). An
+      Azure API Management developer portal exists but the only publicly reachable
+      instance is a non-production "test" environment with no documented production
+      APIs. Endpoints below were probed live; nothing was fabricated. The
+      researchportal.bath.ac.uk Pure OAI path returned 500 and was excluded in
+      favor of the working purehost.bath.ac.uk endpoint.
+    endpoints:
+      - url: https://purehost.bath.ac.uk/ws/oai?verb=Identify
+        status: 200
+        note: Valid OAI-PMH 2.0; "University of Bath Open Access Repository", Pure 5.33.3-3.
+      - url: https://researchdata.bath.ac.uk/cgi/oai2?verb=Identify
+        status: 200
+        note: EPrints 3.4 Research Data Archive OAI-PMH 2.0 base URL.
+      - url: https://researchdata.bath.ac.uk/rest
+        status: 200
+        note: EPrints REST interface resolves; archive also offers RSS/Atom feeds.
+      - url: https://researchdata.bath.ac.uk/
+        status: 200
+        note: Research Data Archive home, powered by EPrints 3.4.
+      - url: https://bath.primo.exlibrisgroup.com/
+        status: 200
+        note: Ex Libris Primo discovery front end for the library catalogue.
+      - url: https://portal.apim.test.bath.ac.uk/
+        status: 200
+        note: Azure API Management developer portal, non-production "test" instance; no documented production APIs.
+      - url: https://researchportal.bath.ac.uk/
+        status: 200
+        note: Pure-driven public research portal (web front end).
+      - url: https://researchportal.bath.ac.uk/ws/oai?verb=Identify
+        status: 500
+        note: Pure OAI path on this host errors; harvesting works via purehost.bath.ac.uk.
+      - url: https://www.bath.ac.uk/
+        status: 200
+        note: Official institutional website.
+      - url: https://github.com/uniofbathdmc
+        status: 200
+        note: University of Bath Digital Development Team GitHub org (verified).
+      - url: https://www.linkedin.com/school/university-of-bath/
+        status: 999
+        note: Official LinkedIn school page; 999 is LinkedIn anti-bot, URL is valid.

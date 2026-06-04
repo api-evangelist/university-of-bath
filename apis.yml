@@ -1,0 +1,114 @@
+---
+aid: university-of-bath
+name: University of Bath
+description: >-
+  The University of Bath is a public research university in Bath, United Kingdom,
+  ranked #150 in the QS World University Rankings 2025. Its public, machine-readable
+  developer footprint is centered on scholarly metadata rather than a commercial
+  developer program: an Elsevier Pure research portal exposing an OAI-PMH interface,
+  an EPrints 3.4 Research Data Archive with OAI-PMH and a REST interface, and an
+  Ex Libris Alma/Primo library discovery platform. The University operates an Azure
+  API Management developer portal, but the publicly reachable instance is a non-production
+  ("test") environment with no openly documented production APIs. Administrative and
+  identity services are gated behind institutional affiliation.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/university-of-bath/refs/heads/main/apis.yml
+tags:
+  - Education
+  - Higher Education
+  - University
+  - United Kingdom
+  - Research
+  - Open Data
+  - Library
+  - Metadata
+created: '2026-06-03'
+modified: '2026-06-03'
+specificationVersion: '0.19'
+apis:
+  - aid: university-of-bath:pure-oai
+    name: Research Portal (Pure) OAI-PMH
+    description: >-
+      OAI-PMH 2.0 metadata harvesting interface for the University of Bath Open
+      Access Repository, served by the institution's Elsevier Pure research
+      information system. Confirmed live via the Identify verb (Pure 5.33.3-3,
+      earliest datestamp November 2014).
+    humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
+    baseURL: https://purehost.bath.ac.uk/ws/oai
+    tags: [ Research, Metadata, OAI-PMH, Repository, Pure ]
+    properties:
+      - type: Documentation
+        url: https://www.bath.ac.uk/guides/overview-of-pure/
+  - aid: university-of-bath:researchdata-oai
+    name: Research Data Archive OAI-PMH
+    description: >-
+      OAI-PMH 2.0 metadata harvesting endpoint for the University of Bath Research
+      Data Archive, an EPrints 3.4 institutional data repository. Confirmed live;
+      the archive footer advertises OAI 2.0 support at this base URL.
+    humanURL: https://researchdata.bath.ac.uk/
+    baseURL: https://researchdata.bath.ac.uk/cgi/oai2
+    tags: [ Research, Open Data, OAI-PMH, Repository, EPrints ]
+    properties:
+      - type: Documentation
+        url: https://researchdata.bath.ac.uk/
+  - aid: university-of-bath:researchdata-rest
+    name: Research Data Archive REST/Feeds
+    description: >-
+      EPrints REST/XML interface and Atom/RSS feeds for the University of Bath
+      Research Data Archive, exposing dataset records and search. The /rest path
+      resolves (HTTP 200); EPrints provides RSS 1.0, RSS 2.0 and Atom feeds.
+    humanURL: https://researchdata.bath.ac.uk/
+    baseURL: https://researchdata.bath.ac.uk/rest
+    tags: [ Research, Open Data, REST, Repository, EPrints ]
+    properties:
+      - type: Documentation
+        url: https://researchdata.bath.ac.uk/
+  - aid: university-of-bath:primo-discovery
+    name: Library Discovery (Ex Libris Primo)
+    description: >-
+      The University of Bath library catalogue runs on Ex Libris Alma with the
+      Primo discovery service. Primo VE exposes search/discovery interfaces (Primo
+      REST/Search APIs) typically requiring an Ex Libris API key; the public Primo
+      front end at bath.primo.exlibrisgroup.com resolves (HTTP 200).
+    humanURL: https://www.bath.ac.uk/guides/using-the-library-catalogue/
+    baseURL: https://bath.primo.exlibrisgroup.com/
+    tags: [ Library, Discovery, Primo, Alma, Ex Libris ]
+    properties:
+      - type: Documentation
+        url: https://www.bath.ac.uk/guides/using-the-library-catalogue/
+  - aid: university-of-bath:apim-portal
+    name: Azure API Management Developer Portal (non-production)
+    description: >-
+      The University operates a Microsoft Azure API Management developer portal.
+      The publicly reachable instance is a non-production "test" environment
+      (portal.apim.test.bath.ac.uk, HTTP 200) with sign-in/sign-up but no openly
+      documented production APIs. Listed for transparency; no production endpoints
+      are confirmed.
+    humanURL: https://portal.apim.test.bath.ac.uk/
+    tags: [ Developer Portal, Azure APIM, Gated ]
+    properties:
+      - type: Documentation
+        url: https://portal.apim.test.bath.ac.uk/
+common:
+  - type: Website
+    url: https://www.bath.ac.uk/
+  - type: GitHub
+    url: https://github.com/uniofbathdmc
+  - type: LinkedIn
+    url: https://www.linkedin.com/school/university-of-bath/
+  - type: DeveloperPortal
+    url: https://portal.apim.test.bath.ac.uk/
+  - type: Plans
+    url: plans/university-of-bath-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/university-of-bath-rate-limits.yml
+  - type: FinOps
+    url: finops/university-of-bath-finops.yml
+  - type: Review
+    url: review.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
