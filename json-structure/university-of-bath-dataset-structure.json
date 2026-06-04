@@ -1,0 +1,321 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/university-of-bath/main/json-structure/university-of-bath-dataset-structure.json",
+  "name": "UniversityOfBathPureDataSet",
+  "description": "JSON Structure for the University of Bath Pure API DataSet object (Pure 5.33.3-3).",
+  "type": "object",
+  "properties": {
+    "pureId": {
+      "type": "int64",
+      "description": "Pure database ID of the object, prefer using the UUID if it is present on the entity"
+    },
+    "uuid": {
+      "type": "string",
+      "description": "UUID, this is the primary identity of the entity"
+    },
+    "createdBy": {
+      "type": "string",
+      "description": "Username of creator"
+    },
+    "createdDate": {
+      "type": "datetime",
+      "description": "Date and time of creation"
+    },
+    "modifiedBy": {
+      "type": "string",
+      "description": "Username of the user that performed a modification"
+    },
+    "modifiedDate": {
+      "type": "datetime",
+      "description": "Date and time of last modification"
+    },
+    "portalUrl": {
+      "type": "string",
+      "description": "URL of the content on the Pure Portal"
+    },
+    "prettyUrlIdentifiers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "All pretty URLs"
+    },
+    "previousUuids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "UUIDs of other content items which have been merged into this content item (or similar)"
+    },
+    "version": {
+      "type": "string",
+      "description": "Used to guard against conflicting updates. For new content this is null, and for existing content the current value. The property should never be modified by a client, except in the rare case where the client wants to perform an update irrespective of if other clients have made updates in the meanti"
+    },
+    "title": {
+      "type": "object",
+      "name": "LocalizedString",
+      "required": true
+    },
+    "descriptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "ClassifiedLocalizedValue"
+      },
+      "description": "A collection of descriptions."
+    },
+    "managingOrganization": {
+      "type": "object",
+      "name": "OrganizationRef",
+      "required": true
+    },
+    "type": {
+      "type": "object",
+      "name": "ClassificationRef",
+      "required": true
+    },
+    "natureTypes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "ClassificationRef"
+      },
+      "description": "Nature of activity types for the project."
+    },
+    "publisher": {
+      "type": "object",
+      "name": "PublisherRef",
+      "required": true
+    },
+    "temporalCoveragePeriod": {
+      "type": "object",
+      "name": "CompoundDateRange"
+    },
+    "dataProductionPeriod": {
+      "type": "object",
+      "name": "CompoundDateRange"
+    },
+    "identifiers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "Identifier"
+      },
+      "description": "IDs that this object corresponds to in external systems. Such as a Scopus ID. Used by Pure where it is necessary to identify objects to specific external systems"
+    },
+    "geoLocation": {
+      "type": "object",
+      "name": "DataSetGeoLocation"
+    },
+    "persons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "AbstractDataSetPersonAssociation"
+      },
+      "description": "DEPRECATED - use contributors instead. The persons that the dataset is associated with",
+      "required": true
+    },
+    "contributors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "AbstractDataSetContributorAssociation"
+      },
+      "description": "The contributors that the dataset is associated with"
+    },
+    "totalNumberOfAuthors": {
+      "type": "int64",
+      "description": "The total number of authors from author collaborations."
+    },
+    "doi": {
+      "type": "object",
+      "name": "DataSetDoi"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "DataSetDocument"
+      },
+      "description": "A collection of documents."
+    },
+    "physicalData": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "DataSetPhysicalData"
+      },
+      "description": "A collection of physical data."
+    },
+    "contactPerson": {
+      "type": "object",
+      "name": "PersonRef"
+    },
+    "legalConditions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "DataSetLegalCondition"
+      },
+      "description": "A collection of legal conditions."
+    },
+    "organizations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "OrganizationRef"
+      },
+      "description": "A collection of organizational unit affiliations."
+    },
+    "externalOrganizations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "ExternalOrganizationRef"
+      },
+      "description": "A collection of external organization affiliations."
+    },
+    "publicationAvailableDate": {
+      "type": "object",
+      "name": "CompoundDate"
+    },
+    "openAccess": {
+      "type": "object",
+      "name": "OpenAccess"
+    },
+    "openAireCompliant": {
+      "type": "boolean",
+      "description": "OpenAire Compliancy."
+    },
+    "license": {
+      "type": "object",
+      "name": "ClassificationRef"
+    },
+    "dataSets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "DataSetAssociation"
+      },
+      "description": "A collection of related datasets."
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "DataSetProjectAssociation"
+      },
+      "description": "A collection of related projects."
+    },
+    "researchOutputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "DataSetResearchOutputAssociation"
+      },
+      "description": "A collection of related research outputs."
+    },
+    "activities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "DataSetActivityAssociation"
+      },
+      "description": "A collection of related activities."
+    },
+    "pressMedia": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "DataSetPressMediaAssociation"
+      },
+      "description": "A collection of related press media."
+    },
+    "studentTheses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "DataSetStudentThesisAssociation"
+      },
+      "description": "A collection of related student theses."
+    },
+    "impacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "DataSetImpactAssociation"
+      },
+      "description": "A collection of related impacts."
+    },
+    "prizes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "DataSetPrizeAssociation"
+      },
+      "description": "A collection of related prizes."
+    },
+    "equipment": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "DataSetEquipmentAssociation"
+      },
+      "description": "A collection of related equipment."
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "Link"
+      },
+      "description": "A collection of links."
+    },
+    "keywordGroups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "KeywordGroup"
+      },
+      "description": "A group for each type of keyword present."
+    },
+    "visibility": {
+      "type": "object",
+      "name": "Visibility",
+      "required": true
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "ImageFile"
+      },
+      "description": "Image files with a maximum file size of 1MB"
+    },
+    "fundingText": {
+      "type": "object",
+      "name": "LocalizedString"
+    },
+    "fundingDetails": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "FundingDetails"
+      },
+      "description": "The funding details for the dataset"
+    },
+    "customDefinedFields": {
+      "type": "object",
+      "name": "CustomDefinedFields"
+    },
+    "workflow": {
+      "type": "object",
+      "name": "Workflow"
+    },
+    "systemName": {
+      "type": "string",
+      "description": "The content system name"
+    }
+  }
+}

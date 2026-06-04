@@ -1,0 +1,228 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/university-of-bath/main/json-structure/university-of-bath-activity-structure.json",
+  "name": "UniversityOfBathPureActivity",
+  "description": "JSON Structure for the University of Bath Pure API Activity object (Pure 5.33.3-3).",
+  "type": "object",
+  "properties": {
+    "pureId": {
+      "type": "int64",
+      "description": "Pure database ID of the object, prefer using the UUID if it is present on the entity"
+    },
+    "uuid": {
+      "type": "string",
+      "description": "UUID, this is the primary identity of the entity"
+    },
+    "createdBy": {
+      "type": "string",
+      "description": "Username of creator"
+    },
+    "createdDate": {
+      "type": "datetime",
+      "description": "Date and time of creation"
+    },
+    "modifiedBy": {
+      "type": "string",
+      "description": "Username of the user that performed a modification"
+    },
+    "modifiedDate": {
+      "type": "datetime",
+      "description": "Date and time of last modification"
+    },
+    "portalUrl": {
+      "type": "string",
+      "description": "URL of the content on the Pure Portal"
+    },
+    "prettyUrlIdentifiers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "All pretty URLs"
+    },
+    "previousUuids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "UUIDs of other content items which have been merged into this content item (or similar)"
+    },
+    "version": {
+      "type": "string",
+      "description": "Used to guard against conflicting updates. For new content this is null, and for existing content the current value. The property should never be modified by a client, except in the rare case where the client wants to perform an update irrespective of if other clients have made updates in the meanti"
+    },
+    "organizations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "OrganizationRef"
+      },
+      "description": "A collection of organization associations."
+    },
+    "persons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "AbstractActivityPersonAssociation"
+      },
+      "description": "A collection of persons.",
+      "required": true
+    },
+    "period": {
+      "type": "object",
+      "name": "CompoundDateRange",
+      "required": true
+    },
+    "category": {
+      "type": "object",
+      "name": "ClassificationRef"
+    },
+    "managingOrganization": {
+      "type": "object",
+      "name": "OrganizationRef",
+      "required": true
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "Link"
+      },
+      "description": "Additional links associated with this activity."
+    },
+    "type": {
+      "type": "object",
+      "name": "ClassificationRef",
+      "required": true
+    },
+    "visibility": {
+      "type": "object",
+      "name": "Visibility",
+      "required": true
+    },
+    "workflow": {
+      "type": "object",
+      "name": "Workflow"
+    },
+    "externalOrganizations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "ExternalOrganizationRef"
+      },
+      "description": "A collection of external organization affiliations."
+    },
+    "identifiers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "Identifier"
+      },
+      "description": "Identifiers related to the activity."
+    },
+    "keywordGroups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "KeywordGroup"
+      },
+      "description": "Groups of keywords associated with the research output."
+    },
+    "activities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "ActivityRef"
+      },
+      "description": "A collection of related activities."
+    },
+    "pressMedia": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "PressMediaRef"
+      },
+      "description": "A collection of related press media."
+    },
+    "studentTheses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "StudentThesisRef"
+      },
+      "description": "A collection of related student theses."
+    },
+    "researchOutputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "ResearchOutputRef"
+      },
+      "description": "A collection of related research outputs."
+    },
+    "impacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "ImpactRef"
+      },
+      "description": "A collection of related impacts."
+    },
+    "equipment": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "EquipmentRef"
+      },
+      "description": "A collection of equipment."
+    },
+    "degreeOfRecognition": {
+      "type": "object",
+      "name": "ClassificationRef"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "Document"
+      },
+      "description": "Associated documents for the activity."
+    },
+    "descriptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "ClassifiedFormattedLocalizedValue"
+      },
+      "description": "A collection of descriptions."
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "ImageFile"
+      },
+      "description": "Image files with a maximum file size of 1MB."
+    },
+    "customDefinedFields": {
+      "type": "object",
+      "name": "CustomDefinedFields"
+    },
+    "indicators": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "ClassificationRef"
+      },
+      "description": "Indicators for the activity."
+    },
+    "systemName": {
+      "type": "string",
+      "description": "The content system name"
+    },
+    "typeDiscriminator": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,66 @@
+---
+vocabulary:
+  name: University of Bath Pure Research API Vocabulary
+  description: >-
+    Controlled vocabulary of the core domain terms exposed by the University of
+    Bath Elsevier Pure research information API (Pure 5.33.3-3), as observed in
+    the published OpenAPI 3.0 description. Terms map to the primary content
+    families and shared building blocks of the Pure data model.
+  version: 5.33.3-3
+  terms:
+    - term: Person
+      definition: >-
+        A researcher or staff member known to Pure, carrying identifiers, names,
+        employment dates, affiliations, keyword groups and a public portal URL.
+      tags: [ object, content, research ]
+    - term: ResearchOutput
+      definition: >-
+        A scholarly output (article, book, chapter, conference contribution, etc.)
+        with contributors, publication statuses, managing organization and type.
+      tags: [ object, content, publication ]
+    - term: DataSet
+      definition: >-
+        A research dataset record describing data deposited or referenced in Pure,
+        including publisher, managing organization, temporal coverage and access.
+      tags: [ object, content, open-data ]
+    - term: Organization
+      definition: >-
+        An organisational unit (department, faculty, research centre) with a type,
+        lifecycle, addresses and name variants.
+      tags: [ object, content, structure ]
+    - term: Activity
+      definition: >-
+        A research activity such as an event, visit, editorial work, examination
+        or membership, associated with persons and organizations.
+      tags: [ object, content, engagement ]
+    - term: uuid
+      definition: >-
+        The stable universally unique identifier that keys every Pure content
+        object and is used in single-object retrieval paths.
+      tags: [ field, identifier ]
+    - term: pureId
+      definition: The internal numeric Pure identifier for an object.
+      tags: [ field, identifier ]
+    - term: portalUrl
+      definition: The public-facing Pure portal URL for a content object.
+      tags: [ field, link ]
+    - term: ClassificationRef
+      definition: >-
+        A reference into a Pure classification scheme (controlled term) used for
+        type, category, language and similar typed fields.
+      tags: [ building-block, classification ]
+    - term: LocalizedString
+      definition: >-
+        A language-keyed map of string values supporting Pure's multilingual
+        content (e.g. en_GB).
+      tags: [ building-block, i18n ]
+    - term: ListResult
+      definition: >-
+        The standard paged collection envelope (count, pageInformation, items)
+        returned by Pure list endpoints.
+      tags: [ building-block, pagination ]
+    - term: api-key
+      definition: >-
+        The required security scheme; all Pure API operations are gated behind an
+        Elsevier Pure API key.
+      tags: [ security, auth ]

@@ -1,0 +1,63 @@
+{
+  "_comment": "Representative example response for GET /research-outputs (operationId researchOutput_list) of the University of Bath Pure API 5.33.3-3. Values are illustrative placeholders shaped to the published OpenAPI schema; the live endpoint requires an api-key.",
+  "request": {
+    "method": "GET",
+    "path": "/ws/api/research-outputs?size=1",
+    "headers": {
+      "api-key": "<required>",
+      "Accept": "application/json"
+    }
+  },
+  "response": {
+    "count": 1,
+    "pageInformation": {
+      "offset": 0,
+      "size": 1
+    },
+    "items": [
+      {
+        "category": {
+          "uri": "string",
+          "term": {}
+        },
+        "contributors": [
+          {
+            "typeDiscriminator": "string",
+            "pureId": 123456,
+            "externalOrganizations": [
+              {}
+            ]
+          }
+        ],
+        "language": {
+          "uri": "string",
+          "term": {}
+        },
+        "managingOrganization": {},
+        "publicationStatuses": [
+          {
+            "pureId": 123456,
+            "current": false,
+            "publicationStatus": {
+              "uri": "string",
+              "term": {}
+            },
+            "publicationDate": {
+              "year": 1,
+              "month": 1,
+              "day": 1
+            }
+          }
+        ],
+        "title": {
+          "value": "string"
+        },
+        "type": {
+          "uri": "string",
+          "term": {}
+        },
+        "typeDiscriminator": "string"
+      }
+    ]
+  }
+}

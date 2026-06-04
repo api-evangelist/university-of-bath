@@ -1,0 +1,278 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/university-of-bath/main/json-structure/university-of-bath-researchoutput-structure.json",
+  "name": "UniversityOfBathPureResearchOutput",
+  "description": "JSON Structure for the University of Bath Pure API ResearchOutput object (Pure 5.33.3-3).",
+  "type": "object",
+  "properties": {
+    "pureId": {
+      "type": "int64",
+      "description": "Pure database ID of the object, prefer using the UUID if it is present on the entity"
+    },
+    "uuid": {
+      "type": "string",
+      "description": "UUID, this is the primary identity of the entity"
+    },
+    "createdBy": {
+      "type": "string",
+      "description": "Username of creator"
+    },
+    "createdDate": {
+      "type": "datetime",
+      "description": "Date and time of creation"
+    },
+    "modifiedBy": {
+      "type": "string",
+      "description": "Username of the user that performed a modification"
+    },
+    "modifiedDate": {
+      "type": "datetime",
+      "description": "Date and time of last modification"
+    },
+    "portalUrl": {
+      "type": "string",
+      "description": "URL of the content on the Pure Portal"
+    },
+    "prettyUrlIdentifiers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "All pretty URLs"
+    },
+    "previousUuids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "UUIDs of other content items which have been merged into this content item (or similar)"
+    },
+    "version": {
+      "type": "string",
+      "description": "Used to guard against conflicting updates. For new content this is null, and for existing content the current value. The property should never be modified by a client, except in the rare case where the client wants to perform an update irrespective of if other clients have made updates in the meanti"
+    },
+    "title": {
+      "type": "object",
+      "name": "FormattedString",
+      "required": true
+    },
+    "subTitle": {
+      "type": "object",
+      "name": "FormattedString"
+    },
+    "type": {
+      "type": "object",
+      "name": "ClassificationRef",
+      "required": true
+    },
+    "category": {
+      "type": "object",
+      "name": "ClassificationRef",
+      "required": true
+    },
+    "peerReview": {
+      "type": "boolean",
+      "description": "Indicates whether the research output is peer reviewed or not. Query the /research-outputs/allowed-peer-review-configurations endpoint for allowed values."
+    },
+    "internationalPeerReview": {
+      "type": "boolean",
+      "description": "Indicates whether the research output is internationally peer reviewed or not. Query the /research-outputs/allowed-peer-review-configurations endpoint for allowed values."
+    },
+    "publicationStatuses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "PublicationStatus"
+      },
+      "description": "Manage the research output's different statuses and dates these were reached.",
+      "required": true
+    },
+    "language": {
+      "type": "object",
+      "name": "ClassificationRef",
+      "required": true
+    },
+    "translatedTitle": {
+      "type": "object",
+      "name": "FormattedLocalizedString"
+    },
+    "translatedSubTitle": {
+      "type": "object",
+      "name": "FormattedLocalizedString"
+    },
+    "contributors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "AbstractContributorAssociation"
+      },
+      "description": "Contributors and their affiliations",
+      "required": true
+    },
+    "organizations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "OrganizationRef"
+      },
+      "description": "A collection of organizational unit affiliations."
+    },
+    "externalOrganizations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "ExternalOrganizationRef"
+      },
+      "description": "A collection of external organization affiliations."
+    },
+    "totalNumberOfContributors": {
+      "type": "int64",
+      "description": "The total number of authors from author collaborations."
+    },
+    "managingOrganization": {
+      "type": "object",
+      "name": "OrganizationRef",
+      "required": true
+    },
+    "submissionYear": {
+      "type": "int64",
+      "description": "The submission year of the research output."
+    },
+    "mainResearchArea": {
+      "type": "object",
+      "name": "ClassificationRef"
+    },
+    "electronicVersions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "ElectronicVersion"
+      },
+      "description": "Electronic versions of this research output."
+    },
+    "additionalFiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "AdditionalFileElectronicVersion"
+      },
+      "description": "Additional files related to this research output."
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "Link"
+      },
+      "description": "Additional links associated with this research output."
+    },
+    "articleProcessingCharge": {
+      "type": "object",
+      "name": "ArticleProcessingCharge"
+    },
+    "keywordGroups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "KeywordGroup"
+      },
+      "description": "Groups of keywords associated with the research output."
+    },
+    "bibliographicalNote": {
+      "type": "object",
+      "name": "LocalizedString"
+    },
+    "descriptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "ClassifiedFormattedLocalizedValue"
+      },
+      "description": "A list of descriptions for this research output. Query the relevant /research-outputs/allowed-*-description-types endpoint for allowed types."
+    },
+    "visibility": {
+      "type": "object",
+      "name": "Visibility"
+    },
+    "workflow": {
+      "type": "object",
+      "name": "Workflow"
+    },
+    "identifiers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "Identifier"
+      },
+      "description": "Identifiers related to the research output."
+    },
+    "activities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "ActivityRef"
+      },
+      "description": "Activities related to the research output,"
+    },
+    "equipment": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "EquipmentRef"
+      },
+      "description": "Equipment related to the research output."
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "ProjectAwardableAssociation"
+      },
+      "description": "Projects related to the research output."
+    },
+    "researchOutputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "ResearchOutputAssociation"
+      },
+      "description": "Other related research outputs."
+    },
+    "customDefinedFields": {
+      "type": "object",
+      "name": "CustomDefinedFields"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "ImageFile"
+      },
+      "description": "Image files with a maximum file size of 1MB"
+    },
+    "fundingText": {
+      "type": "object",
+      "name": "LocalizedString"
+    },
+    "fundingDetails": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "name": "FundingDetails"
+      },
+      "description": "The funding details for the research output"
+    },
+    "systemName": {
+      "type": "string",
+      "description": "The content system name"
+    },
+    "abstract": {
+      "type": "object",
+      "name": "FormattedLocalizedString"
+    },
+    "typeDiscriminator": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

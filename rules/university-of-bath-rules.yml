@@ -1,0 +1,65 @@
+---
+# Spectral ruleset encoding patterns observed in the University of Bath
+# Elsevier Pure research information API (Pure 5.33.3-3) OpenAPI 3.0 description.
+# These rules reflect real conventions seen in the published spec.
+formats:
+  - oas3
+extends:
+  - spectral:oas
+rules:
+  # Pure secures every operation with the api-key security scheme.
+  bath-pure-api-key-security-defined:
+    description: A reusable "api-key" security scheme must be declared.
+    severity: error
+    given: $.components.securitySchemes
+    then:
+      field: api-key
+      function: truthy
+
+  # Pure serves resources under the /ws/api server base path.
+  bath-pure-server-ws-api:
+    description: Server URL should be the Pure /ws/api base path.
+    severity: warn
+    given: $.servers[*].url
+    then:
+      function: pattern
+      functionOptions:
+        match: "/ws/api"
+
+  # Every operation in the Pure API carries an operationId (e.g. person_list).
+  bath-pure-operationid-snake-case:
+    description: operationId should use Pure's snake/underscore convention (e.g. person_list).
+    severity: warn
+    given: $.paths[*][get,post,put,delete].operationId
+    then:
+      function: pattern
+      functionOptions:
+        match: "^[a-zA-Z]+_[a-zA-Z-]+$"
+
+  # List endpoints expose size + offset paging query parameters.
+  bath-pure-list-paging-params:
+    description: List operations should document size/offset paging.
+    severity: hint
+    given: $.paths[?(@property.match(/s$/))].get.parameters[*].name
+    then:
+      function: pattern
+      functionOptions:
+        match: "^(size|offset|order|q|.*)$"
+
+  # Operations should be grouped by a Pure content tag (activity, person, etc.).
+  bath-pure-operation-tagged:
+    description: Each operation should be tagged with its Pure content family.
+    severity: warn
+    given: $.paths[*][get,post,put,delete]
+    then:
+      field: tags
+      function: truthy
+
+  # Pure objects are keyed by a UUID; descriptions should be present on info.
+  bath-pure-info-description:
+    description: API info must carry a description.
+    severity: error
+    given: $.info
+    then:
+      field: description
+      function: truthy

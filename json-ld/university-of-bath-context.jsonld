@@ -1,0 +1,46 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "bath": "https://researchportal.bath.ac.uk/vocab#",
+    "pure": "https://www.elsevier.com/solutions/pure/vocab#",
+
+    "University": "schema:CollegeOrUniversity",
+    "name": "schema:name",
+    "url": "schema:url",
+    "description": "schema:description",
+    "identifier": "schema:identifier",
+
+    "Person": "schema:Person",
+    "ResearchOutput": "schema:CreativeWork",
+    "DataSet": "schema:Dataset",
+    "Organization": "schema:Organization",
+    "Activity": "schema:Event",
+
+    "uuid": { "@id": "schema:identifier" },
+    "pureId": { "@id": "bath:pureId" },
+    "portalUrl": { "@id": "schema:url", "@type": "@id" },
+    "title": "schema:name",
+    "subTitle": "schema:alternativeHeadline",
+    "type": "schema:additionalType",
+    "category": "schema:category",
+    "language": "schema:inLanguage",
+    "contributors": { "@id": "schema:contributor", "@container": "@set" },
+    "managingOrganization": { "@id": "schema:sourceOrganization", "@type": "@id" },
+    "publisher": "schema:publisher",
+    "publicationStatuses": { "@id": "schema:creativeWorkStatus", "@container": "@set" },
+    "createdDate": { "@id": "schema:dateCreated", "@type": "schema:DateTime" },
+    "modifiedDate": { "@id": "schema:dateModified", "@type": "schema:DateTime" },
+    "keywordGroups": { "@id": "schema:keywords", "@container": "@set" },
+    "addresses": { "@id": "schema:address", "@container": "@set" },
+    "nameVariants": { "@id": "schema:alternateName", "@container": "@set" },
+
+    "items": { "@id": "schema:itemListElement", "@container": "@set" },
+    "count": "schema:numberOfItems"
+  },
+  "@type": "University",
+  "name": "University of Bath",
+  "url": "https://www.bath.ac.uk/",
+  "description": "Public research university in Bath, United Kingdom. Exposes scholarly metadata via an Elsevier Pure research information API, OAI-PMH harvesting interfaces, and an EPrints research data archive.",
+  "identifier": "university-of-bath"
+}

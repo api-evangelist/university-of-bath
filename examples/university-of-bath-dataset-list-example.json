@@ -1,0 +1,56 @@
+{
+  "_comment": "Representative example response for GET /data-sets (operationId dataSet_list) of the University of Bath Pure API 5.33.3-3. Values are illustrative placeholders shaped to the published OpenAPI schema; the live endpoint requires an api-key.",
+  "request": {
+    "method": "GET",
+    "path": "/ws/api/data-sets?size=1",
+    "headers": {
+      "api-key": "<required>",
+      "Accept": "application/json"
+    }
+  },
+  "response": {
+    "count": 1,
+    "pageInformation": {
+      "offset": 0,
+      "size": 1
+    },
+    "items": [
+      {
+        "managingOrganization": {},
+        "persons": [
+          {
+            "role": {
+              "uri": "string",
+              "term": {}
+            },
+            "typeDiscriminator": "string",
+            "pureId": 123456,
+            "externalOrganizations": [
+              {}
+            ],
+            "name": {
+              "firstName": "string",
+              "lastName": "string"
+            },
+            "period": {
+              "startDate": "2024-11-02",
+              "endDate": "2024-11-02"
+            }
+          }
+        ],
+        "publisher": {},
+        "title": {},
+        "type": {
+          "uri": "string",
+          "term": {}
+        },
+        "visibility": {
+          "key": "FREE",
+          "description": {}
+        },
+        "pureId": 123456,
+        "uuid": "d3a8f6c2-0000-4a1b-9c7e-000000000001"
+      }
+    ]
+  }
+}
