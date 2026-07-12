@@ -108,6 +108,10 @@ apis:
       - type: Documentation
         url: https://portal.apim.test.bath.ac.uk/
 common:
+  - type: DomainSecurity
+    url: security/university-of-bath-domain-security.yml
+  - type: Authentication
+    url: authentication/university-of-bath-authentication.yml
   - type: Website
     url: https://www.bath.ac.uk/
   - type: GitHub
