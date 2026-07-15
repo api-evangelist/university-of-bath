@@ -108,6 +108,8 @@ apis:
       - type: Documentation
         url: https://portal.apim.test.bath.ac.uk/
 common:
+  - type: AgenticAccess
+    url: agentic-access/university-of-bath-agentic-access.yml
   - type: DomainSecurity
     url: security/university-of-bath-domain-security.yml
   - type: Authentication
