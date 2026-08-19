@@ -1,0 +1,3815 @@
+{
+  "item": [
+    {
+      "id": "b1f22bb6-94c9-4c7d-a2cd-fada64803c68",
+      "name": "externalPerson",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c54ed8bc-1842-4a24-8db1-a05c24064f8e",
+          "name": "Lists all external persons",
+          "request": {
+            "name": "Lists all external persons",
+            "description": {
+              "content": "Lists all external persons in the Pure instance. If you need to filter the external persons returned, see the POST version which supports additional filtering.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "10",
+                  "description": "Number of returned external persons per request."
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "The offset for the returned list. 0 or null value is from the start"
+                },
+                {
+                  "disabled": false,
+                  "key": "order",
+                  "value": "<string>",
+                  "description": "The order of the list, must be a value from /external-persons/orderings"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c852e929-b9e9-482e-a258-6ae87177d32d",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "size",
+                      "value": "10"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "order",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"count\": 106,\n  \"pageInformation\": {\n    \"offset\": 226,\n    \"size\": 7794\n  },\n  \"items\": [\n    {\n      \"pureId\": 1281,\n      \"uuid\": \"0cd6a967-5ddd-b838-02a5-424664f5fd48\",\n      \"createdBy\": \"string\",\n      \"createdDate\": \"2005-05-31T00:54:45.243Z\",\n      \"modifiedBy\": \"string\",\n      \"modifiedDate\": \"2012-12-08T22:10:54.579Z\",\n      \"portalUrl\": \"string\",\n      \"prettyUrlIdentifiers\": [\n        \"string\",\n        \"string\"\n      ],\n      \"previousUuids\": [\n        \"string\",\n        \"string\"\n      ],\n      \"version\": \"string\",\n      \"identifiers\": [\n        {\n          \"typeDiscriminator\": \"string\"\n        },\n        {\n          \"typeDiscriminator\": \"string\"\n        }\n      ],\n      \"name\": {\n        \"firstName\": \"string\",\n        \"lastName\": \"string\"\n      },\n      \"type\": {\n        \"uri\": \"string\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"title\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"country\": {\n        \"uri\": \"string\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"email\": \"9jvOd@UPIeCqbioqLNWgWJkxbULlt.hcqw\",\n      \"gender\": {\n        \"key\": \"UNKNOWN\",\n        \"value\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"externalOrganizations\": [\n        {\n          \"systemName\": \"string\",\n          \"uuid\": \"98a74807-410d-3777-1546-918ed62cb335\"\n        },\n        {\n          \"systemName\": \"string\",\n          \"uuid\": \"0302b5a2-9c47-8b13-8532-9d8c3182f79d\"\n        }\n      ],\n      \"keywordGroups\": [\n        {\n          \"logicalName\": \"string\",\n          \"typeDiscriminator\": \"string\",\n          \"pureId\": 2138,\n          \"name\": {\n            \"en_GB\": \"Some text\"\n          }\n        },\n        {\n          \"logicalName\": \"string\",\n          \"typeDiscriminator\": \"string\",\n          \"pureId\": 9979,\n          \"name\": {\n            \"en_GB\": \"Some text\"\n          }\n        }\n      ],\n      \"workflow\": {\n        \"step\": \"string\",\n        \"description\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"images\": [\n        {\n          \"fileName\": \"string\",\n          \"mimeType\": \"string\",\n          \"pureId\": 5772,\n          \"fileId\": \"string\",\n          \"size\": 8529,\n          \"url\": \"string\",\n          \"fileStoreLocations\": {\n            \"key_0\": \"string\",\n            \"key_1\": \"string\",\n            \"key_2\": \"string\"\n          },\n          \"uploadedFile\": {\n            \"key\": \"string\",\n            \"digest\": \"string\",\n            \"digestType\": \"string\",\n            \"size\": 1302,\n            \"mimeType\": \"string\",\n            \"timeStamp\": \"1956-12-09T07:12:54.102Z\",\n            \"expires\": \"2026-04-01T03:24:36.539Z\"\n          },\n          \"remoteFile\": {\n            \"fileId\": \"string\",\n            \"fileState\": \"DELETED\",\n            \"sourceId\": \"string\",\n            \"storeName\": \"string\",\n            \"timeStamp\": \"1987-03-09T22:59:08.539Z\",\n            \"metadataUpdateRequired\": false\n          },\n          \"type\": {\n            \"uri\": \"string\",\n            \"term\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"copyrightConfirmation\": true,\n          \"caption\": {\n            \"en_GB\": \"Some text\"\n          },\n          \"altText\": {\n            \"en_GB\": \"Some text\"\n          },\n          \"copyrightStatement\": {\n            \"en_GB\": \"Some text\"\n          }\n        },\n        {\n          \"fileName\": \"string\",\n          \"mimeType\": \"string\",\n          \"pureId\": 7440,\n          \"fileId\": \"string\",\n          \"size\": 7062,\n          \"url\": \"string\",\n          \"fileStoreLocations\": {\n            \"key_0\": \"string\"\n          },\n          \"uploadedFile\": {\n            \"key\": \"string\",\n            \"digest\": \"string\",\n            \"digestType\": \"string\",\n            \"size\": 4669,\n            \"mimeType\": \"string\",\n            \"timeStamp\": \"2018-01-29T12:09:03.774Z\",\n            \"expires\": \"1973-02-24T06:28:01.879Z\"\n          },\n          \"remoteFile\": {\n            \"fileId\": \"string\",\n            \"fileState\": \"STORED\",\n            \"sourceId\": \"string\",\n            \"storeName\": \"string\",\n            \"timeStamp\": \"1966-12-06T11:36:47.270Z\",\n            \"metadataUpdateRequired\": false\n          },\n          \"type\": {\n            \"uri\": \"string\",\n            \"term\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"copyrightConfirmation\": false,\n          \"caption\": {\n            \"en_GB\": \"Some text\"\n          },\n          \"altText\": {\n            \"en_GB\": \"Some text\"\n          },\n          \"copyrightStatement\": {\n            \"en_GB\": \"Some text\"\n          }\n        }\n      ],\n      \"systemName\": \"string\"\n    },\n    {\n      \"pureId\": 7126,\n      \"uuid\": \"20e2fc83-82bd-1099-5ae8-bbd82d40667e\",\n      \"createdBy\": \"string\",\n      \"createdDate\": \"2017-09-28T05:57:55.509Z\",\n      \"modifiedBy\": \"string\",\n      \"modifiedDate\": \"1952-11-07T17:00:00.850Z\",\n      \"portalUrl\": \"string\",\n      \"prettyUrlIdentifiers\": [\n        \"string\",\n        \"string\"\n      ],\n      \"previousUuids\": [\n        \"string\",\n        \"string\"\n      ],\n      \"version\": \"string\",\n      \"identifiers\": [\n        {\n          \"typeDiscriminator\": \"string\"\n        },\n        {\n          \"typeDiscriminator\": \"string\"\n        }\n      ],\n      \"name\": {\n        \"firstName\": \"string\",\n        \"lastName\": \"string\"\n      },\n      \"type\": {\n        \"uri\": \"string\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"title\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"country\": {\n        \"uri\": \"string\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"email\": \"gOLkE@yXxhFZt.fsco\",\n      \"gender\": {\n        \"key\": \"UNKNOWN\",\n        \"value\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"externalOrganizations\": [\n        {\n          \"systemName\": \"string\",\n          \"uuid\": \"c2f8e359-17d8-9e32-7641-104d7dca5dc4\"\n        },\n        {\n          \"systemName\": \"string\",\n          \"uuid\": \"1b5f532b-f49b-ee72-1c27-f316a778f36a\"\n        }\n      ],\n      \"keywordGroups\": [\n        {\n          \"logicalName\": \"string\",\n          \"typeDiscriminator\": \"string\",\n          \"pureId\": 5963,\n          \"name\": {\n            \"en_GB\": \"Some text\"\n          }\n        },\n        {\n          \"logicalName\": \"string\",\n          \"typeDiscriminator\": \"string\",\n          \"pureId\": 7053,\n          \"name\": {\n            \"en_GB\": \"Some text\"\n          }\n        }\n      ],\n      \"workflow\": {\n        \"step\": \"string\",\n        \"description\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"images\": [\n        {\n          \"fileName\": \"string\",\n          \"mimeType\": \"string\",\n          \"pureId\": 4439,\n          \"fileId\": \"string\",\n          \"size\": 4568,\n          \"url\": \"string\",\n          \"fileStoreLocations\": {\n            \"key_0\": \"string\"\n          },\n          \"uploadedFile\": {\n            \"key\": \"string\",\n            \"digest\": \"string\",\n            \"digestType\": \"string\",\n            \"size\": 5410,\n            \"mimeType\": \"string\",\n            \"timeStamp\": \"1998-03-23T03:29:51.767Z\",\n            \"expires\": \"2002-10-22T05:46:46.201Z\"\n          },\n          \"remoteFile\": {\n            \"fileId\": \"string\",\n            \"fileState\": \"DELETE_IN_PROGRESS\",\n            \"sourceId\": \"string\",\n            \"storeName\": \"string\",\n            \"timeStamp\": \"1962-09-07T14:24:30.280Z\",\n            \"metadataUpdateRequired\": false\n          },\n          \"type\": {\n            \"uri\": \"string\",\n            \"term\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"copyrightConfirmation\": false,\n          \"caption\": {\n            \"en_GB\": \"Some text\"\n          },\n          \"altText\": {\n            \"en_GB\": \"Some text\"\n          },\n          \"copyrightStatement\": {\n            \"en_GB\": \"Some text\"\n          }\n        },\n        {\n          \"fileName\": \"string\",\n          \"mimeType\": \"string\",\n          \"pureId\": 5125,\n          \"fileId\": \"string\",\n          \"size\": 6717,\n          \"url\": \"string\",\n          \"fileStoreLocations\": {\n            \"key_0\": \"string\",\n            \"key_1\": \"string\",\n            \"key_2\": \"string\"\n          },\n          \"uploadedFile\": {\n            \"key\": \"string\",\n            \"digest\": \"string\",\n            \"digestType\": \"string\",\n            \"size\": 7767,\n            \"mimeType\": \"string\",\n            \"timeStamp\": \"2001-02-14T12:27:07.279Z\",\n            \"expires\": \"1976-12-27T12:51:22.565Z\"\n          },\n          \"remoteFile\": {\n            \"fileId\": \"string\",\n            \"fileState\": \"CREATION_IN_PROGRESS\",\n            \"sourceId\": \"string\",\n            \"storeName\": \"string\",\n            \"timeStamp\": \"1962-11-19T19:17:19.328Z\",\n            \"metadataUpdateRequired\": false\n          },\n          \"type\": {\n            \"uri\": \"string\",\n            \"term\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"copyrightConfirmation\": false,\n          \"caption\": {\n            \"en_GB\": \"Some text\"\n          },\n          \"altText\": {\n            \"en_GB\": \"Some text\"\n          },\n          \"copyrightStatement\": {\n            \"en_GB\": \"Some text\"\n          }\n        }\n      ],\n      \"systemName\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "92885d4d-6da5-48e1-81bb-3776ddf01266",
+          "name": "Create external person",
+          "request": {
+            "name": "Create external person",
+            "description": {
+              "content": "Create external person",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"version\": \"<string>\",\n  \"identifiers\": [\n    {\n      \"typeDiscriminator\": \"<string>\"\n    },\n    {\n      \"typeDiscriminator\": \"<string>\"\n    }\n  ],\n  \"name\": {\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\"\n  },\n  \"type\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"key_0\": \"<string>\"\n    }\n  },\n  \"title\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\",\n    \"key_2\": \"<string>\"\n  },\n  \"country\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"key_0\": \"<string>\",\n      \"key_1\": \"<string>\",\n      \"key_2\": \"<string>\"\n    }\n  },\n  \"email\": \"<email>\",\n  \"gender\": {\n    \"key\": \"<string>\",\n    \"value\": {\n      \"key_0\": \"<string>\"\n    }\n  },\n  \"externalOrganizations\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"keywordGroups\": [\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"name\": {\n        \"key_0\": \"<string>\",\n        \"key_1\": \"<string>\"\n      }\n    },\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"name\": {\n        \"key_0\": \"<string>\",\n        \"key_1\": \"<string>\"\n      }\n    }\n  ],\n  \"workflow\": {\n    \"step\": \"<string>\",\n    \"description\": {\n      \"key_0\": \"<string>\"\n    }\n  },\n  \"images\": [\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"size\": \"<long>\",\n      \"uploadedFile\": {},\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"fileData\": \"<byte>\",\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"key_0\": \"<string>\",\n          \"key_1\": \"<string>\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"key_0\": \"<string>\",\n        \"key_1\": \"<string>\",\n        \"key_2\": \"<string>\"\n      },\n      \"altText\": {\n        \"key_0\": \"<string>\"\n      },\n      \"copyrightStatement\": {\n        \"key_0\": \"<string>\",\n        \"key_1\": \"<string>\"\n      }\n    },\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"size\": \"<long>\",\n      \"uploadedFile\": {},\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"fileData\": \"<byte>\",\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"key_0\": \"<string>\",\n          \"key_1\": \"<string>\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"key_0\": \"<string>\"\n      },\n      \"altText\": {\n        \"key_0\": \"<string>\"\n      },\n      \"copyrightStatement\": {\n        \"key_0\": \"<string>\"\n      }\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ce090748-5e20-46c4-80cd-95f667fee5ec",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"version\": \"<string>\",\n  \"identifiers\": [\n    {\n      \"typeDiscriminator\": \"<string>\"\n    },\n    {\n      \"typeDiscriminator\": \"<string>\"\n    }\n  ],\n  \"name\": {\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\"\n  },\n  \"type\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"title\": {\n    \"en_GB\": \"Some text\"\n  },\n  \"country\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"email\": \"<email>\",\n  \"gender\": {\n    \"key\": \"<string>\",\n    \"value\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"externalOrganizations\": [\n    {\n      \"systemName\": \"<string>\",\n      \"uuid\": \"<uuid>\"\n    },\n    {\n      \"systemName\": \"<string>\",\n      \"uuid\": \"<uuid>\"\n    }\n  ],\n  \"keywordGroups\": [\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"name\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"name\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ],\n  \"workflow\": {\n    \"step\": \"<string>\",\n    \"description\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"images\": [\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"size\": \"<long>\",\n      \"uploadedFile\": {},\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"fileData\": \"<byte>\",\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"altText\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"copyrightStatement\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"size\": \"<long>\",\n      \"uploadedFile\": {},\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"fileData\": \"<byte>\",\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"altText\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"copyrightStatement\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pureId\": 4119,\n  \"uuid\": \"4483ae3d-0b8d-fa2c-4576-021b403aeb91\",\n  \"createdBy\": \"string\",\n  \"createdDate\": \"1963-11-07T18:35:47.552Z\",\n  \"modifiedBy\": \"string\",\n  \"modifiedDate\": \"1982-04-12T08:28:52.252Z\",\n  \"portalUrl\": \"string\",\n  \"prettyUrlIdentifiers\": [\n    \"string\",\n    \"string\"\n  ],\n  \"previousUuids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"version\": \"<string>\",\n  \"identifiers\": [\n    {\n      \"typeDiscriminator\": \"<string>\"\n    },\n    {\n      \"typeDiscriminator\": \"<string>\"\n    }\n  ],\n  \"name\": {\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\"\n  },\n  \"type\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"title\": {\n    \"en_GB\": \"Some text\"\n  },\n  \"country\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"email\": \"<email>\",\n  \"gender\": {\n    \"key\": \"<string>\",\n    \"value\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"externalOrganizations\": [\n    {\n      \"systemName\": \"<string>\",\n      \"uuid\": \"<uuid>\"\n    },\n    {\n      \"systemName\": \"<string>\",\n      \"uuid\": \"<uuid>\"\n    }\n  ],\n  \"keywordGroups\": [\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"pureId\": 4356,\n      \"name\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"pureId\": 1527,\n      \"name\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ],\n  \"workflow\": {\n    \"step\": \"<string>\",\n    \"description\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"images\": [\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"pureId\": 6206,\n      \"fileId\": \"string\",\n      \"size\": \"<long>\",\n      \"url\": \"string\",\n      \"fileStoreLocations\": {\n        \"key_0\": \"string\"\n      },\n      \"uploadedFile\": {\n        \"digest\": \"string\",\n        \"digestType\": \"string\",\n        \"size\": 2587,\n        \"mimeType\": \"string\",\n        \"timeStamp\": \"1951-12-09T17:42:46.605Z\",\n        \"expires\": \"2001-03-20T14:24:00.601Z\",\n        \"key\": \"string\"\n      },\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"altText\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"copyrightStatement\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"pureId\": 4016,\n      \"fileId\": \"string\",\n      \"size\": \"<long>\",\n      \"url\": \"string\",\n      \"fileStoreLocations\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"uploadedFile\": {\n        \"digest\": \"string\",\n        \"digestType\": \"string\",\n        \"size\": 156,\n        \"mimeType\": \"string\",\n        \"timeStamp\": \"1993-07-23T03:53:51.692Z\",\n        \"expires\": \"2000-08-25T23:07:44.182Z\",\n        \"key\": \"string\"\n      },\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"altText\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"copyrightStatement\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ],\n  \"systemName\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9b483d79-47c4-48a4-961f-78d50e8fdf51",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"version\": \"<string>\",\n  \"identifiers\": [\n    {\n      \"typeDiscriminator\": \"<string>\"\n    },\n    {\n      \"typeDiscriminator\": \"<string>\"\n    }\n  ],\n  \"name\": {\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\"\n  },\n  \"type\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"title\": {\n    \"en_GB\": \"Some text\"\n  },\n  \"country\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"email\": \"<email>\",\n  \"gender\": {\n    \"key\": \"<string>\",\n    \"value\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"externalOrganizations\": [\n    {\n      \"systemName\": \"<string>\",\n      \"uuid\": \"<uuid>\"\n    },\n    {\n      \"systemName\": \"<string>\",\n      \"uuid\": \"<uuid>\"\n    }\n  ],\n  \"keywordGroups\": [\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"name\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"name\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ],\n  \"workflow\": {\n    \"step\": \"<string>\",\n    \"description\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"images\": [\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"size\": \"<long>\",\n      \"uploadedFile\": {},\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"fileData\": \"<byte>\",\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"altText\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"copyrightStatement\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"size\": \"<long>\",\n      \"uploadedFile\": {},\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"fileData\": \"<byte>\",\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"altText\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"copyrightStatement\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 7657,\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2207c01f-0c4c-4957-acfb-4543d1cf1df6",
+          "name": "A list of allowed classified identifier types",
+          "request": {
+            "name": "A list of allowed classified identifier types",
+            "description": {
+              "content": "Get a list of allowed classified identifier types that can be used for the 'identifiers.type' attribute of external persons",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                "allowed-classified-identifier-types"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9c53f570-940e-48df-8528-d9c4e11cf29c",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    "allowed-classified-identifier-types"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"classifications\": [\n    {\n      \"uri\": \"<string>\",\n      \"term\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"uri\": \"<string>\",\n      \"term\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "555ada45-a1d4-4cdd-bf59-23870ee834c6",
+          "name": "A list of allowed countries",
+          "request": {
+            "name": "A list of allowed countries",
+            "description": {
+              "content": "Get a list of allowed countries that can be used for the 'countries' attribute of external persons",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                "allowed-countries"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "626f8ed8-c06b-4a0e-ae55-0d4e2449a180",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    "allowed-countries"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"classifications\": [\n    {\n      \"uri\": \"<string>\",\n      \"term\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"uri\": \"<string>\",\n      \"term\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d042f5c3-cfa7-4285-ba3a-19b1648deada",
+          "name": "A list of allowed image types",
+          "request": {
+            "name": "A list of allowed image types",
+            "description": {
+              "content": "Get a list of allowed image types that can be used for the 'images.type' attribute of external persons",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                "allowed-image-types"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f5e74879-c2c8-415e-abaf-47400710dd6c",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    "allowed-image-types"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"classifications\": [\n    {\n      \"uri\": \"<string>\",\n      \"term\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"uri\": \"<string>\",\n      \"term\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "48766097-513f-4a53-97f7-bb86a9820fc3",
+          "name": "A list of keyword group configurations",
+          "request": {
+            "name": "A list of keyword group configurations",
+            "description": {
+              "content": "Get a list of allowed keyword group configurations that can be used when submitting keyword groups.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                "allowed-keyword-group-configurations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "26be36b7-3d3c-42c5-8716-930f793763c5",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    "allowed-keyword-group-configurations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"configurations\": [\n    {\n      \"targetSystemName\": \"string\",\n      \"pureId\": 959,\n      \"keywordGroupType\": \"string\",\n      \"name\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"description\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"classificationScheme\": {\n        \"systemName\": \"<string>\",\n        \"uuid\": \"<uuid>\"\n      },\n      \"allowUserdefinedKeywords\": false,\n      \"limitToLeafSelection\": false,\n      \"logicalName\": \"string\",\n      \"relationType\": \"string\"\n    },\n    {\n      \"targetSystemName\": \"string\",\n      \"pureId\": 3818,\n      \"keywordGroupType\": \"string\",\n      \"name\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"description\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"classificationScheme\": {\n        \"systemName\": \"<string>\",\n        \"uuid\": \"<uuid>\"\n      },\n      \"allowUserdefinedKeywords\": false,\n      \"limitToLeafSelection\": false,\n      \"logicalName\": \"string\",\n      \"relationType\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1f00fd12-40a0-4734-9681-c76bfb256413",
+          "name": "A list of allowed classifications for the specified keyword group",
+          "request": {
+            "name": "A list of allowed classifications for the specified keyword group",
+            "description": {
+              "content": "Get a list of allowed classifications that can be used when submitting a specified keyword group.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                "allowed-keyword-group-configurations",
+                ":id",
+                "classifications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) Pure id of the keyword group configuration"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3d85bd7a-54c8-46f3-91f2-198a436ce08e",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    "allowed-keyword-group-configurations",
+                    ":id",
+                    "classifications"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) Pure id of the keyword group configuration"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"classifications\": [\n    {\n      \"uri\": \"<string>\",\n      \"term\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"uri\": \"<string>\",\n      \"term\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bfe6c884-1c63-4f39-b34a-2c5d238f10d1",
+          "name": "A list of allowed locales in localized strings",
+          "request": {
+            "name": "A list of allowed locales in localized strings",
+            "description": {
+              "content": "Get a list of allowed locales that can be used when submitting localized string entities.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                "allowed-locales"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3b9cc09c-1653-4081-aa81-317a2b265db2",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    "allowed-locales"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"locales\": \"/cu_QO/\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f24851b5-9860-4adf-b26b-67a57ffb9771",
+          "name": "A list of allowed external person types",
+          "request": {
+            "name": "A list of allowed external person types",
+            "description": {
+              "content": "Get a list of allowed types that can be used for the 'type' attribute of external persons",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                "allowed-types"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3ffb99c9-0beb-47a6-b7b9-f34933b922d1",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    "allowed-types"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"classifications\": [\n    {\n      \"uri\": \"<string>\",\n      \"term\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"uri\": \"<string>\",\n      \"term\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1856371f-f6ed-460c-b5d7-a81c455777f4",
+          "name": "A list of allowed workflow steps",
+          "request": {
+            "name": "A list of allowed workflow steps",
+            "description": {
+              "content": "Get a list of allowed workflow steps that can be used for the 'workflow' attribute of external persons",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                "allowed-workflow-steps"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fe3f91e2-3cc8-455e-a0b9-7f81f44ec894",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    "allowed-workflow-steps"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"workflows\": [\n    {\n      \"step\": \"<string>\",\n      \"description\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"step\": \"<string>\",\n      \"description\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "334ce7c1-186e-4bd4-8f9a-5e9a1a54b4be",
+          "name": "A list of allowed discipline schemes",
+          "request": {
+            "name": "A list of allowed discipline schemes",
+            "description": {
+              "content": "Get a list fo a allowed discipline schemes for external persons",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                "disciplines",
+                "allowed-discipline-schemes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "90b9f175-26f4-446a-81b8-80fb55edfda8",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    "disciplines",
+                    "allowed-discipline-schemes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"count\": 5308,\n  \"items\": [\n    {\n      \"disciplineScheme\": \"string\",\n      \"title\": \"string\"\n    },\n    {\n      \"disciplineScheme\": \"string\",\n      \"title\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d8abd820-e20a-4590-9940-704e6fd599ed",
+          "name": "A list of allowed disciplines for a specific discipline scheme",
+          "request": {
+            "name": "A list of allowed disciplines for a specific discipline scheme",
+            "description": {
+              "content": "Get a list of a allowed disciplines for specific discipline scheme for external persons",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                "disciplines",
+                ":discipline-scheme",
+                "allowed-disciplines"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "10",
+                  "description": "Number of returned disciplines per request"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "The offset for the returned list. 0 or null value is from the start"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "discipline-scheme",
+                  "description": "(Required) Identifier for the discipline scheme for external persons"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f00456f1-21e0-4aab-b2f9-1d49fe0418d2",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    "disciplines",
+                    ":discipline-scheme",
+                    "allowed-disciplines"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "size",
+                      "value": "10"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "discipline-scheme",
+                      "description": "(Required) Identifier for the discipline scheme for external persons"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"count\": 7177,\n  \"pageInformation\": {\n    \"offset\": 6804,\n    \"size\": 7403\n  },\n  \"items\": [\n    {\n      \"disciplineId\": \"string\",\n      \"title\": \"string\",\n      \"description\": \"string\"\n    },\n    {\n      \"disciplineId\": \"string\",\n      \"title\": \"string\",\n      \"description\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "adeb7bc1-4e4b-4131-a55f-6ea1be864ed3",
+          "name": "Query operation for disciplines associated with external persons",
+          "request": {
+            "name": "Query operation for disciplines associated with external persons",
+            "description": {
+              "content": "Lists disciplines from the discipline scheme associated with external persons in the Pure instance that matches the provided query.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                "disciplines",
+                ":discipline-scheme",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "discipline-scheme",
+                  "description": "(Required) Identifier for the discipline scheme"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uuids\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ],\n  \"size\": \"<integer>\",\n  \"offset\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d9644e16-6c69-49cb-bbe5-c53b099ea750",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    "disciplines",
+                    ":discipline-scheme",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "discipline-scheme",
+                      "description": "(Required) Identifier for the discipline scheme"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"uuids\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ],\n  \"size\": \"<integer>\",\n  \"offset\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"count\": 9341,\n  \"pageInformation\": {\n    \"offset\": 1221,\n    \"size\": 5080\n  },\n  \"items\": [\n    {\n      \"disciplineAssignments\": [\n        {\n          \"disciplineId\": \"string\",\n          \"splitPercentage\": 8427.954405059972\n        },\n        {\n          \"disciplineId\": \"string\",\n          \"splitPercentage\": 3694.0711982920193\n        }\n      ],\n      \"content\": {\n        \"systemName\": \"<string>\",\n        \"uuid\": \"<uuid>\"\n      },\n      \"disciplineScheme\": \"string\"\n    },\n    {\n      \"disciplineAssignments\": [\n        {\n          \"disciplineId\": \"string\",\n          \"splitPercentage\": 2450.4565827465376\n        },\n        {\n          \"disciplineId\": \"string\",\n          \"splitPercentage\": 6664.082221426311\n        }\n      ],\n      \"content\": {\n        \"systemName\": \"<string>\",\n        \"uuid\": \"<uuid>\"\n      },\n      \"disciplineScheme\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c7c0fa67-5366-4a10-904a-e0b6223935ef",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    "disciplines",
+                    ":discipline-scheme",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "discipline-scheme",
+                      "description": "(Required) Identifier for the discipline scheme"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"uuids\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ],\n  \"size\": \"<integer>\",\n  \"offset\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 7657,\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9b0511a1-3a68-4ce5-bb8d-85ae4fe967aa",
+          "name": "Upload file to a specific external person",
+          "request": {
+            "name": "Upload file to a specific external person",
+            "description": {
+              "content": "Uploads file for the external person",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                "file-uploads"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "*/*"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "file"
+            }
+          },
+          "response": [
+            {
+              "id": "e4b99d75-4aa2-467c-b0fd-2b9361a337f1",
+              "name": "default response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    "file-uploads"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Set the mime type for the file",
+                    "key": "Content-Type",
+                    "value": "string"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "file"
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"digest\": \"string\",\n  \"digestType\": \"string\",\n  \"size\": 1022,\n  \"mimeType\": \"string\",\n  \"timeStamp\": \"2004-10-22T05:21:45.751Z\",\n  \"expires\": \"2017-02-28T15:08:40.912Z\",\n  \"key\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "30ebc7a5-8b56-4fe6-93b0-120d7d5fb113",
+          "name": "Lists available orderings",
+          "request": {
+            "name": "Lists available orderings",
+            "description": {
+              "content": "Lists all orderings available to the external person endpoint. These values can be used by the order parameter.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                "orderings"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1ddd777c-4b81-434b-8669-ea8be7e48f98",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    "orderings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"orderings\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "55e55db3-b1ab-4a0d-849d-81ceb915bc76",
+          "name": "Query operation for external persons",
+          "request": {
+            "name": "Query operation for external persons",
+            "description": {
+              "content": "Lists external persons in the Pure instance that matches the provided query, similar to the GET version, instead of using parameters to alter the response, an JSON document is posted with the request. The JSON document contains fields for all the parameters available for the GET version, but also additional filtering options.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uuids\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ],\n  \"size\": \"<integer>\",\n  \"offset\": \"<integer>\",\n  \"orderings\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"searchString\": \"<string>\",\n  \"orderBy\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a85f01b7-9372-4c5b-9eab-ffa3bfdffe0e",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"uuids\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ],\n  \"size\": \"<integer>\",\n  \"offset\": \"<integer>\",\n  \"orderings\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"searchString\": \"<string>\",\n  \"orderBy\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"count\": 2083,\n  \"pageInformation\": {\n    \"offset\": 123,\n    \"size\": 8871\n  },\n  \"items\": [\n    {\n      \"pureId\": 212,\n      \"uuid\": \"2c22f9ab-7a94-05e1-a368-51aceb6b08d7\",\n      \"createdBy\": \"string\",\n      \"createdDate\": \"1953-12-23T03:09:03.033Z\",\n      \"modifiedBy\": \"string\",\n      \"modifiedDate\": \"2004-12-20T14:14:57.748Z\",\n      \"portalUrl\": \"string\",\n      \"prettyUrlIdentifiers\": [\n        \"string\",\n        \"string\"\n      ],\n      \"previousUuids\": [\n        \"string\",\n        \"string\"\n      ],\n      \"version\": \"<string>\",\n      \"identifiers\": [\n        {\n          \"typeDiscriminator\": \"<string>\"\n        },\n        {\n          \"typeDiscriminator\": \"<string>\"\n        }\n      ],\n      \"name\": {\n        \"firstName\": \"<string>\",\n        \"lastName\": \"<string>\"\n      },\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"title\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"country\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"email\": \"<email>\",\n      \"gender\": {\n        \"key\": \"<string>\",\n        \"value\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"externalOrganizations\": [\n        {\n          \"systemName\": \"<string>\",\n          \"uuid\": \"<uuid>\"\n        },\n        {\n          \"systemName\": \"<string>\",\n          \"uuid\": \"<uuid>\"\n        }\n      ],\n      \"keywordGroups\": [\n        {\n          \"logicalName\": \"<string>\",\n          \"typeDiscriminator\": \"<string>\",\n          \"pureId\": 2225,\n          \"name\": {\n            \"en_GB\": \"Some text\"\n          }\n        },\n        {\n          \"logicalName\": \"<string>\",\n          \"typeDiscriminator\": \"<string>\",\n          \"pureId\": 9023,\n          \"name\": {\n            \"en_GB\": \"Some text\"\n          }\n        }\n      ],\n      \"workflow\": {\n        \"step\": \"<string>\",\n        \"description\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"images\": [\n        {\n          \"fileName\": \"<string>\",\n          \"mimeType\": \"<string>\",\n          \"pureId\": 6431,\n          \"fileId\": \"string\",\n          \"size\": \"<long>\",\n          \"url\": \"string\",\n          \"fileStoreLocations\": {\n            \"key_0\": \"string\",\n            \"key_1\": \"string\",\n            \"key_2\": \"string\"\n          },\n          \"uploadedFile\": {\n            \"digest\": \"string\",\n            \"digestType\": \"string\",\n            \"size\": 8346,\n            \"mimeType\": \"string\",\n            \"timeStamp\": \"1989-05-28T02:37:32.930Z\",\n            \"expires\": \"2000-10-21T18:22:44.293Z\",\n            \"key\": \"string\"\n          },\n          \"remoteFile\": {\n            \"fileId\": \"<string>\",\n            \"fileState\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"storeName\": \"<string>\",\n            \"timeStamp\": \"<dateTime>\",\n            \"metadataUpdateRequired\": false\n          },\n          \"type\": {\n            \"uri\": \"<string>\",\n            \"term\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"copyrightConfirmation\": \"<boolean>\",\n          \"caption\": {\n            \"en_GB\": \"Some text\"\n          },\n          \"altText\": {\n            \"en_GB\": \"Some text\"\n          },\n          \"copyrightStatement\": {\n            \"en_GB\": \"Some text\"\n          }\n        },\n        {\n          \"fileName\": \"<string>\",\n          \"mimeType\": \"<string>\",\n          \"pureId\": 740,\n          \"fileId\": \"string\",\n          \"size\": \"<long>\",\n          \"url\": \"string\",\n          \"fileStoreLocations\": {\n            \"key_0\": \"string\"\n          },\n          \"uploadedFile\": {\n            \"digest\": \"string\",\n            \"digestType\": \"string\",\n            \"size\": 4418,\n            \"mimeType\": \"string\",\n            \"timeStamp\": \"1948-10-13T16:57:43.755Z\",\n            \"expires\": \"1978-03-04T15:51:41.739Z\",\n            \"key\": \"string\"\n          },\n          \"remoteFile\": {\n            \"fileId\": \"<string>\",\n            \"fileState\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"storeName\": \"<string>\",\n            \"timeStamp\": \"<dateTime>\",\n            \"metadataUpdateRequired\": false\n          },\n          \"type\": {\n            \"uri\": \"<string>\",\n            \"term\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"copyrightConfirmation\": \"<boolean>\",\n          \"caption\": {\n            \"en_GB\": \"Some text\"\n          },\n          \"altText\": {\n            \"en_GB\": \"Some text\"\n          },\n          \"copyrightStatement\": {\n            \"en_GB\": \"Some text\"\n          }\n        }\n      ],\n      \"systemName\": \"string\"\n    },\n    {\n      \"pureId\": 7094,\n      \"uuid\": \"0ea2c64b-4d2b-0b60-6f6a-163d233f043d\",\n      \"createdBy\": \"string\",\n      \"createdDate\": \"2011-12-08T18:13:25.302Z\",\n      \"modifiedBy\": \"string\",\n      \"modifiedDate\": \"1967-07-10T09:08:53.745Z\",\n      \"portalUrl\": \"string\",\n      \"prettyUrlIdentifiers\": [\n        \"string\",\n        \"string\"\n      ],\n      \"previousUuids\": [\n        \"string\",\n        \"string\"\n      ],\n      \"version\": \"<string>\",\n      \"identifiers\": [\n        {\n          \"typeDiscriminator\": \"<string>\"\n        },\n        {\n          \"typeDiscriminator\": \"<string>\"\n        }\n      ],\n      \"name\": {\n        \"firstName\": \"<string>\",\n        \"lastName\": \"<string>\"\n      },\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"title\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"country\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"email\": \"<email>\",\n      \"gender\": {\n        \"key\": \"<string>\",\n        \"value\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"externalOrganizations\": [\n        {\n          \"systemName\": \"<string>\",\n          \"uuid\": \"<uuid>\"\n        },\n        {\n          \"systemName\": \"<string>\",\n          \"uuid\": \"<uuid>\"\n        }\n      ],\n      \"keywordGroups\": [\n        {\n          \"logicalName\": \"<string>\",\n          \"typeDiscriminator\": \"<string>\",\n          \"pureId\": 3788,\n          \"name\": {\n            \"en_GB\": \"Some text\"\n          }\n        },\n        {\n          \"logicalName\": \"<string>\",\n          \"typeDiscriminator\": \"<string>\",\n          \"pureId\": 2269,\n          \"name\": {\n            \"en_GB\": \"Some text\"\n          }\n        }\n      ],\n      \"workflow\": {\n        \"step\": \"<string>\",\n        \"description\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"images\": [\n        {\n          \"fileName\": \"<string>\",\n          \"mimeType\": \"<string>\",\n          \"pureId\": 3353,\n          \"fileId\": \"string\",\n          \"size\": \"<long>\",\n          \"url\": \"string\",\n          \"fileStoreLocations\": {\n            \"key_0\": \"string\",\n            \"key_1\": \"string\"\n          },\n          \"uploadedFile\": {\n            \"digest\": \"string\",\n            \"digestType\": \"string\",\n            \"size\": 4733,\n            \"mimeType\": \"string\",\n            \"timeStamp\": \"2025-01-31T19:10:41.540Z\",\n            \"expires\": \"1996-12-06T20:56:30.422Z\",\n            \"key\": \"string\"\n          },\n          \"remoteFile\": {\n            \"fileId\": \"<string>\",\n            \"fileState\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"storeName\": \"<string>\",\n            \"timeStamp\": \"<dateTime>\",\n            \"metadataUpdateRequired\": false\n          },\n          \"type\": {\n            \"uri\": \"<string>\",\n            \"term\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"copyrightConfirmation\": \"<boolean>\",\n          \"caption\": {\n            \"en_GB\": \"Some text\"\n          },\n          \"altText\": {\n            \"en_GB\": \"Some text\"\n          },\n          \"copyrightStatement\": {\n            \"en_GB\": \"Some text\"\n          }\n        },\n        {\n          \"fileName\": \"<string>\",\n          \"mimeType\": \"<string>\",\n          \"pureId\": 370,\n          \"fileId\": \"string\",\n          \"size\": \"<long>\",\n          \"url\": \"string\",\n          \"fileStoreLocations\": {\n            \"key_0\": \"string\",\n            \"key_1\": \"string\",\n            \"key_2\": \"string\"\n          },\n          \"uploadedFile\": {\n            \"digest\": \"string\",\n            \"digestType\": \"string\",\n            \"size\": 1404,\n            \"mimeType\": \"string\",\n            \"timeStamp\": \"2024-04-17T01:35:04.064Z\",\n            \"expires\": \"2025-12-05T09:20:46.429Z\",\n            \"key\": \"string\"\n          },\n          \"remoteFile\": {\n            \"fileId\": \"<string>\",\n            \"fileState\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"storeName\": \"<string>\",\n            \"timeStamp\": \"<dateTime>\",\n            \"metadataUpdateRequired\": false\n          },\n          \"type\": {\n            \"uri\": \"<string>\",\n            \"term\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"copyrightConfirmation\": \"<boolean>\",\n          \"caption\": {\n            \"en_GB\": \"Some text\"\n          },\n          \"altText\": {\n            \"en_GB\": \"Some text\"\n          },\n          \"copyrightStatement\": {\n            \"en_GB\": \"Some text\"\n          }\n        }\n      ],\n      \"systemName\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "923b8f37-e0d4-43e3-a81f-c2233ad04114",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"uuids\": [\n    \"<uuid>\",\n    \"<uuid>\"\n  ],\n  \"size\": \"<integer>\",\n  \"offset\": \"<integer>\",\n  \"orderings\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"searchString\": \"<string>\",\n  \"orderBy\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 7657,\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f1bb1e04-476b-4647-acaf-e52a937d4fa2",
+          "name": "Get external person",
+          "request": {
+            "name": "Get external person",
+            "description": {
+              "content": "Get external person with specific UUID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                ":uuid"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "uuid",
+                  "description": "(Required) UUID of the desired external person"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9eca76d1-e1cd-458f-9de8-ef9bbca5f5f8",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the desired external person"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pureId\": 4119,\n  \"uuid\": \"4483ae3d-0b8d-fa2c-4576-021b403aeb91\",\n  \"createdBy\": \"string\",\n  \"createdDate\": \"1963-11-07T18:35:47.552Z\",\n  \"modifiedBy\": \"string\",\n  \"modifiedDate\": \"1982-04-12T08:28:52.252Z\",\n  \"portalUrl\": \"string\",\n  \"prettyUrlIdentifiers\": [\n    \"string\",\n    \"string\"\n  ],\n  \"previousUuids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"version\": \"<string>\",\n  \"identifiers\": [\n    {\n      \"typeDiscriminator\": \"<string>\"\n    },\n    {\n      \"typeDiscriminator\": \"<string>\"\n    }\n  ],\n  \"name\": {\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\"\n  },\n  \"type\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"title\": {\n    \"en_GB\": \"Some text\"\n  },\n  \"country\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"email\": \"<email>\",\n  \"gender\": {\n    \"key\": \"<string>\",\n    \"value\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"externalOrganizations\": [\n    {\n      \"systemName\": \"<string>\",\n      \"uuid\": \"<uuid>\"\n    },\n    {\n      \"systemName\": \"<string>\",\n      \"uuid\": \"<uuid>\"\n    }\n  ],\n  \"keywordGroups\": [\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"pureId\": 4356,\n      \"name\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"pureId\": 1527,\n      \"name\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ],\n  \"workflow\": {\n    \"step\": \"<string>\",\n    \"description\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"images\": [\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"pureId\": 6206,\n      \"fileId\": \"string\",\n      \"size\": \"<long>\",\n      \"url\": \"string\",\n      \"fileStoreLocations\": {\n        \"key_0\": \"string\"\n      },\n      \"uploadedFile\": {\n        \"digest\": \"string\",\n        \"digestType\": \"string\",\n        \"size\": 2587,\n        \"mimeType\": \"string\",\n        \"timeStamp\": \"1951-12-09T17:42:46.605Z\",\n        \"expires\": \"2001-03-20T14:24:00.601Z\",\n        \"key\": \"string\"\n      },\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"altText\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"copyrightStatement\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"pureId\": 4016,\n      \"fileId\": \"string\",\n      \"size\": \"<long>\",\n      \"url\": \"string\",\n      \"fileStoreLocations\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"uploadedFile\": {\n        \"digest\": \"string\",\n        \"digestType\": \"string\",\n        \"size\": 156,\n        \"mimeType\": \"string\",\n        \"timeStamp\": \"1993-07-23T03:53:51.692Z\",\n        \"expires\": \"2000-08-25T23:07:44.182Z\",\n        \"key\": \"string\"\n      },\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"altText\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"copyrightStatement\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ],\n  \"systemName\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8a6698b6-a759-456a-9209-888c836f3e22",
+              "name": "The requested content have changed UUID",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the desired external person"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Moved Permanently",
+              "code": 301,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f71f83c6-2392-48fe-b5f1-a5838acba0ac",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the desired external person"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 7657,\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3ffb30ac-1ccd-42ae-8b84-3da2daa7a8f6",
+          "name": "Update external persons",
+          "request": {
+            "name": "Update external persons",
+            "description": {
+              "content": "Update external persons with specific UUID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                ":uuid"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "uuid",
+                  "description": "(Required) UUID of the external person to update"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"version\": \"<string>\",\n  \"identifiers\": [\n    {\n      \"typeDiscriminator\": \"<string>\"\n    },\n    {\n      \"typeDiscriminator\": \"<string>\"\n    }\n  ],\n  \"name\": {\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\"\n  },\n  \"type\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"key_0\": \"<string>\"\n    }\n  },\n  \"title\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\"\n  },\n  \"country\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"key_0\": \"<string>\"\n    }\n  },\n  \"email\": \"<email>\",\n  \"gender\": {\n    \"key\": \"<string>\",\n    \"value\": {\n      \"key_0\": \"<string>\",\n      \"key_1\": \"<string>\"\n    }\n  },\n  \"externalOrganizations\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"keywordGroups\": [\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"name\": {\n        \"key_0\": \"<string>\",\n        \"key_1\": \"<string>\",\n        \"key_2\": \"<string>\",\n        \"key_3\": \"<string>\"\n      }\n    },\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"name\": {\n        \"key_0\": \"<string>\",\n        \"key_1\": \"<string>\",\n        \"key_2\": \"<string>\",\n        \"key_3\": \"<string>\"\n      }\n    }\n  ],\n  \"workflow\": {\n    \"step\": \"<string>\",\n    \"description\": {\n      \"key_0\": \"<string>\",\n      \"key_1\": \"<string>\",\n      \"key_2\": \"<string>\",\n      \"key_3\": \"<string>\"\n    }\n  },\n  \"images\": [\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"size\": \"<long>\",\n      \"uploadedFile\": {},\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"fileData\": \"<byte>\",\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"key_0\": \"<string>\",\n          \"key_1\": \"<string>\",\n          \"key_2\": \"<string>\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"key_0\": \"<string>\",\n        \"key_1\": \"<string>\"\n      },\n      \"altText\": {\n        \"key_0\": \"<string>\",\n        \"key_1\": \"<string>\",\n        \"key_2\": \"<string>\"\n      },\n      \"copyrightStatement\": {\n        \"key_0\": \"<string>\",\n        \"key_1\": \"<string>\"\n      }\n    },\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"size\": \"<long>\",\n      \"uploadedFile\": {},\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"fileData\": \"<byte>\",\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"key_0\": \"<string>\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"key_0\": \"<string>\",\n        \"key_1\": \"<string>\"\n      },\n      \"altText\": {\n        \"key_0\": \"<string>\",\n        \"key_1\": \"<string>\"\n      },\n      \"copyrightStatement\": {\n        \"key_0\": \"<string>\",\n        \"key_1\": \"<string>\"\n      }\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "aec4a729-3535-40b2-87f7-e21300ed51e9",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the external person to update"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"version\": \"<string>\",\n  \"identifiers\": [\n    {\n      \"typeDiscriminator\": \"<string>\"\n    },\n    {\n      \"typeDiscriminator\": \"<string>\"\n    }\n  ],\n  \"name\": {\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\"\n  },\n  \"type\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"title\": {\n    \"en_GB\": \"Some text\"\n  },\n  \"country\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"email\": \"<email>\",\n  \"gender\": {\n    \"key\": \"<string>\",\n    \"value\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"externalOrganizations\": [\n    {\n      \"systemName\": \"<string>\",\n      \"uuid\": \"<uuid>\"\n    },\n    {\n      \"systemName\": \"<string>\",\n      \"uuid\": \"<uuid>\"\n    }\n  ],\n  \"keywordGroups\": [\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"name\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"name\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ],\n  \"workflow\": {\n    \"step\": \"<string>\",\n    \"description\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"images\": [\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"size\": \"<long>\",\n      \"uploadedFile\": {},\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"fileData\": \"<byte>\",\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"altText\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"copyrightStatement\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"size\": \"<long>\",\n      \"uploadedFile\": {},\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"fileData\": \"<byte>\",\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"altText\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"copyrightStatement\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pureId\": 4119,\n  \"uuid\": \"4483ae3d-0b8d-fa2c-4576-021b403aeb91\",\n  \"createdBy\": \"string\",\n  \"createdDate\": \"1963-11-07T18:35:47.552Z\",\n  \"modifiedBy\": \"string\",\n  \"modifiedDate\": \"1982-04-12T08:28:52.252Z\",\n  \"portalUrl\": \"string\",\n  \"prettyUrlIdentifiers\": [\n    \"string\",\n    \"string\"\n  ],\n  \"previousUuids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"version\": \"<string>\",\n  \"identifiers\": [\n    {\n      \"typeDiscriminator\": \"<string>\"\n    },\n    {\n      \"typeDiscriminator\": \"<string>\"\n    }\n  ],\n  \"name\": {\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\"\n  },\n  \"type\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"title\": {\n    \"en_GB\": \"Some text\"\n  },\n  \"country\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"email\": \"<email>\",\n  \"gender\": {\n    \"key\": \"<string>\",\n    \"value\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"externalOrganizations\": [\n    {\n      \"systemName\": \"<string>\",\n      \"uuid\": \"<uuid>\"\n    },\n    {\n      \"systemName\": \"<string>\",\n      \"uuid\": \"<uuid>\"\n    }\n  ],\n  \"keywordGroups\": [\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"pureId\": 4356,\n      \"name\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"pureId\": 1527,\n      \"name\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ],\n  \"workflow\": {\n    \"step\": \"<string>\",\n    \"description\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"images\": [\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"pureId\": 6206,\n      \"fileId\": \"string\",\n      \"size\": \"<long>\",\n      \"url\": \"string\",\n      \"fileStoreLocations\": {\n        \"key_0\": \"string\"\n      },\n      \"uploadedFile\": {\n        \"digest\": \"string\",\n        \"digestType\": \"string\",\n        \"size\": 2587,\n        \"mimeType\": \"string\",\n        \"timeStamp\": \"1951-12-09T17:42:46.605Z\",\n        \"expires\": \"2001-03-20T14:24:00.601Z\",\n        \"key\": \"string\"\n      },\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"altText\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"copyrightStatement\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"pureId\": 4016,\n      \"fileId\": \"string\",\n      \"size\": \"<long>\",\n      \"url\": \"string\",\n      \"fileStoreLocations\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"uploadedFile\": {\n        \"digest\": \"string\",\n        \"digestType\": \"string\",\n        \"size\": 156,\n        \"mimeType\": \"string\",\n        \"timeStamp\": \"1993-07-23T03:53:51.692Z\",\n        \"expires\": \"2000-08-25T23:07:44.182Z\",\n        \"key\": \"string\"\n      },\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"altText\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"copyrightStatement\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ],\n  \"systemName\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6061f050-64c1-4c7c-8481-3a6ca889e6e7",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the external person to update"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"version\": \"<string>\",\n  \"identifiers\": [\n    {\n      \"typeDiscriminator\": \"<string>\"\n    },\n    {\n      \"typeDiscriminator\": \"<string>\"\n    }\n  ],\n  \"name\": {\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\"\n  },\n  \"type\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"title\": {\n    \"en_GB\": \"Some text\"\n  },\n  \"country\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"email\": \"<email>\",\n  \"gender\": {\n    \"key\": \"<string>\",\n    \"value\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"externalOrganizations\": [\n    {\n      \"systemName\": \"<string>\",\n      \"uuid\": \"<uuid>\"\n    },\n    {\n      \"systemName\": \"<string>\",\n      \"uuid\": \"<uuid>\"\n    }\n  ],\n  \"keywordGroups\": [\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"name\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"name\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ],\n  \"workflow\": {\n    \"step\": \"<string>\",\n    \"description\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"images\": [\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"size\": \"<long>\",\n      \"uploadedFile\": {},\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"fileData\": \"<byte>\",\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"altText\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"copyrightStatement\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"size\": \"<long>\",\n      \"uploadedFile\": {},\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"fileData\": \"<byte>\",\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"altText\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"copyrightStatement\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 7657,\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "80cababf-1e61-4ddd-a313-b16393e194fa",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the external person to update"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"version\": \"<string>\",\n  \"identifiers\": [\n    {\n      \"typeDiscriminator\": \"<string>\"\n    },\n    {\n      \"typeDiscriminator\": \"<string>\"\n    }\n  ],\n  \"name\": {\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\"\n  },\n  \"type\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"title\": {\n    \"en_GB\": \"Some text\"\n  },\n  \"country\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"email\": \"<email>\",\n  \"gender\": {\n    \"key\": \"<string>\",\n    \"value\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"externalOrganizations\": [\n    {\n      \"systemName\": \"<string>\",\n      \"uuid\": \"<uuid>\"\n    },\n    {\n      \"systemName\": \"<string>\",\n      \"uuid\": \"<uuid>\"\n    }\n  ],\n  \"keywordGroups\": [\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"name\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"name\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ],\n  \"workflow\": {\n    \"step\": \"<string>\",\n    \"description\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"images\": [\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"size\": \"<long>\",\n      \"uploadedFile\": {},\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"fileData\": \"<byte>\",\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"altText\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"copyrightStatement\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"size\": \"<long>\",\n      \"uploadedFile\": {},\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"fileData\": \"<byte>\",\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"altText\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"copyrightStatement\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 7657,\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "20714d29-ee3f-42d4-8f3e-3184c59adaeb",
+              "name": "Version conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the external person to update"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"version\": \"<string>\",\n  \"identifiers\": [\n    {\n      \"typeDiscriminator\": \"<string>\"\n    },\n    {\n      \"typeDiscriminator\": \"<string>\"\n    }\n  ],\n  \"name\": {\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\"\n  },\n  \"type\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"title\": {\n    \"en_GB\": \"Some text\"\n  },\n  \"country\": {\n    \"uri\": \"<string>\",\n    \"term\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"email\": \"<email>\",\n  \"gender\": {\n    \"key\": \"<string>\",\n    \"value\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"externalOrganizations\": [\n    {\n      \"systemName\": \"<string>\",\n      \"uuid\": \"<uuid>\"\n    },\n    {\n      \"systemName\": \"<string>\",\n      \"uuid\": \"<uuid>\"\n    }\n  ],\n  \"keywordGroups\": [\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"name\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"logicalName\": \"<string>\",\n      \"typeDiscriminator\": \"<string>\",\n      \"name\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ],\n  \"workflow\": {\n    \"step\": \"<string>\",\n    \"description\": {\n      \"en_GB\": \"Some text\"\n    }\n  },\n  \"images\": [\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"size\": \"<long>\",\n      \"uploadedFile\": {},\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"fileData\": \"<byte>\",\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"altText\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"copyrightStatement\": {\n        \"en_GB\": \"Some text\"\n      }\n    },\n    {\n      \"fileName\": \"<string>\",\n      \"mimeType\": \"<string>\",\n      \"size\": \"<long>\",\n      \"uploadedFile\": {},\n      \"remoteFile\": {\n        \"fileId\": \"<string>\",\n        \"fileState\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"storeName\": \"<string>\",\n        \"timeStamp\": \"<dateTime>\",\n        \"metadataUpdateRequired\": false\n      },\n      \"fileData\": \"<byte>\",\n      \"type\": {\n        \"uri\": \"<string>\",\n        \"term\": {\n          \"en_GB\": \"Some text\"\n        }\n      },\n      \"copyrightConfirmation\": \"<boolean>\",\n      \"caption\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"altText\": {\n        \"en_GB\": \"Some text\"\n      },\n      \"copyrightStatement\": {\n        \"en_GB\": \"Some text\"\n      }\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 3931,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"modified\": \"2007-02-02T02:08:09.314Z\",\n  \"modifiedBy\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d566c8c8-f33c-4b2c-88b3-20fccafd337c",
+          "name": "Delete external person",
+          "request": {
+            "name": "Delete external person",
+            "description": {
+              "content": "Delete external person with specific UUID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                ":uuid"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "uuid",
+                  "description": "(Required) UUID of the external person"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/problem+json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a7760f00-39e7-4260-8d1f-5b8f32ace281",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the external person"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c348ac69-97e4-496f-b527-27eb36c91784",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the external person"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 7657,\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "27e37dab-c003-4fec-a87f-6505b6c40cdb",
+              "name": "Conflict",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the external person"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 3931,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"modified\": \"2007-02-02T02:08:09.314Z\",\n  \"modifiedBy\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "09a31730-75cb-4b02-8b9b-bbbf08823fd7",
+          "name": "Lock the content",
+          "request": {
+            "name": "Lock the content",
+            "description": {
+              "content": "Mark the content as external (used when content contains synchronised data). This has no effect on interactions with the content through the API.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                ":uuid",
+                "actions",
+                "lock"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "uuid",
+                  "description": "(Required) UUID of the content to lock"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/problem+json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "62869355-f2cf-4731-909c-ffa968b1b607",
+              "name": "Content marked as locked",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid",
+                    "actions",
+                    "lock"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the content to lock"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "7a7bb9ca-cd11-428d-ada3-7dcc65a91fe2",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid",
+                    "actions",
+                    "lock"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the content to lock"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 7657,\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1c6c098b-29b3-4be9-a4d9-38580052fb37",
+              "name": "Content already locked",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid",
+                    "actions",
+                    "lock"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the content to lock"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 3931,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"modified\": \"2007-02-02T02:08:09.314Z\",\n  \"modifiedBy\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9cd824d8-d976-4299-b87c-48571c07815c",
+          "name": "Unlock the content",
+          "request": {
+            "name": "Unlock the content",
+            "description": {
+              "content": "Remove the external mark on the content (used when content contains synchronised data). This has no effect on interactions with the content through the API.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                ":uuid",
+                "actions",
+                "unlock"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "uuid",
+                  "description": "(Required) UUID of the content to unlock"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/problem+json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "02ac687a-0b6a-4bc0-ac67-9d1407d37a5a",
+              "name": "Content marked as unlocked",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid",
+                    "actions",
+                    "unlock"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the content to unlock"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "4978c1a1-241b-4eb6-9d3e-378e856880b6",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid",
+                    "actions",
+                    "unlock"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the content to unlock"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 7657,\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c79799e6-befa-413b-a737-5598630e163e",
+              "name": "Content already unlocked",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid",
+                    "actions",
+                    "unlock"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the content to unlock"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 3931,\n  \"detail\": \"string\",\n  \"instance\": \"string\",\n  \"modified\": \"2007-02-02T02:08:09.314Z\",\n  \"modifiedBy\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a2c9a54c-fd45-4845-ab77-c35364d51757",
+          "name": "Lists all dependents to a external person",
+          "request": {
+            "name": "Lists all dependents to a external person",
+            "description": {
+              "content": "Lists all dependents to a external person with the specified UUID. If the user does not have access to view all the dependent content, an authorization error will be thrown. ",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                ":uuid",
+                "dependents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "verbose",
+                  "value": "false",
+                  "description": "Default: false. Setting this to true will add links and names to the output but will also have an impact on performance. use with caution."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "uuid",
+                  "description": "(Required) UUID of the external person"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "94c2dc5d-98e4-4bbd-becf-405848d7a77c",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid",
+                    "dependents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "verbose",
+                      "value": "false"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the external person"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"items\": [\n    {\n      \"systemName\": \"<string>\",\n      \"uuid\": \"<uuid>\"\n    },\n    {\n      \"systemName\": \"<string>\",\n      \"uuid\": \"<uuid>\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0df79e3d-9d34-4b02-9fc3-1bf6a09239f8",
+          "name": "Get disciplines from the discipline scheme associated with the external person",
+          "request": {
+            "name": "Get disciplines from the discipline scheme associated with the external person",
+            "description": {
+              "content": "Get disciplines from the discipline scheme associated with the external person with specific UUID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                ":uuid",
+                "disciplines",
+                ":discipline-scheme"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "uuid",
+                  "description": "(Required) UUID of the desired external person"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "discipline-scheme",
+                  "description": "(Required) Identifier for the discipline scheme"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "562bf648-f582-42e0-8fba-981f66d04001",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid",
+                    "disciplines",
+                    ":discipline-scheme"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the desired external person"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "discipline-scheme",
+                      "description": "(Required) Identifier for the discipline scheme"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"disciplineAssignments\": [\n    {\n      \"disciplineId\": \"string\",\n      \"splitPercentage\": 4119.210072621967\n    },\n    {\n      \"disciplineId\": \"string\",\n      \"splitPercentage\": 7983.920457631352\n    }\n  ],\n  \"content\": {\n    \"systemName\": \"<string>\",\n    \"uuid\": \"<uuid>\"\n  },\n  \"disciplineScheme\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3feb798d-4205-400a-aea1-1cd83a9deb24",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid",
+                    "disciplines",
+                    ":discipline-scheme"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the desired external person"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "discipline-scheme",
+                      "description": "(Required) Identifier for the discipline scheme"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 7657,\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5e3cece4-babb-4ead-be7f-8ef0f6dd17fe",
+          "name": "Update disciplines from the discipline scheme associated with the external person",
+          "request": {
+            "name": "Update disciplines from the discipline scheme associated with the external person",
+            "description": {
+              "content": "Update disciplines from the discipline scheme associated with the external person with specific UUID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                ":uuid",
+                "disciplines",
+                ":discipline-scheme"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "uuid",
+                  "description": "(Required) UUID of the external person to update"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "discipline-scheme",
+                  "description": "(Required) Identifier for the discipline scheme"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"disciplineAssignments\": [\n    {\n      \"disciplineId\": \"<string>\",\n      \"splitPercentage\": \"<double>\"\n    },\n    {\n      \"disciplineId\": \"<string>\",\n      \"splitPercentage\": \"<double>\"\n    }\n  ],\n  \"content\": {\n    \"systemName\": \"<string>\",\n    \"uuid\": \"<uuid>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "37a316ef-add3-4ebf-85d9-ca378e2043d7",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid",
+                    "disciplines",
+                    ":discipline-scheme"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the external person to update"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "discipline-scheme",
+                      "description": "(Required) Identifier for the discipline scheme"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"disciplineAssignments\": [\n    {\n      \"disciplineId\": \"<string>\",\n      \"splitPercentage\": \"<double>\"\n    },\n    {\n      \"disciplineId\": \"<string>\",\n      \"splitPercentage\": \"<double>\"\n    }\n  ],\n  \"content\": {\n    \"systemName\": \"<string>\",\n    \"uuid\": \"<uuid>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"disciplineAssignments\": [\n    {\n      \"disciplineId\": \"<string>\",\n      \"splitPercentage\": \"<double>\"\n    },\n    {\n      \"disciplineId\": \"<string>\",\n      \"splitPercentage\": \"<double>\"\n    }\n  ],\n  \"content\": {\n    \"systemName\": \"<string>\",\n    \"uuid\": \"<uuid>\"\n  },\n  \"disciplineScheme\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8ba84b3e-2b58-4098-bae1-5f6a419fc2a1",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid",
+                    "disciplines",
+                    ":discipline-scheme"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the external person to update"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "discipline-scheme",
+                      "description": "(Required) Identifier for the discipline scheme"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"disciplineAssignments\": [\n    {\n      \"disciplineId\": \"<string>\",\n      \"splitPercentage\": \"<double>\"\n    },\n    {\n      \"disciplineId\": \"<string>\",\n      \"splitPercentage\": \"<double>\"\n    }\n  ],\n  \"content\": {\n    \"systemName\": \"<string>\",\n    \"uuid\": \"<uuid>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 7657,\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "09ada6c5-d7ae-41ba-9f82-d85d0046f748",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid",
+                    "disciplines",
+                    ":discipline-scheme"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the external person to update"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "discipline-scheme",
+                      "description": "(Required) Identifier for the discipline scheme"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"disciplineAssignments\": [\n    {\n      \"disciplineId\": \"<string>\",\n      \"splitPercentage\": \"<double>\"\n    },\n    {\n      \"disciplineId\": \"<string>\",\n      \"splitPercentage\": \"<double>\"\n    }\n  ],\n  \"content\": {\n    \"systemName\": \"<string>\",\n    \"uuid\": \"<uuid>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 7657,\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "88ddc6af-e2cc-4bb0-9a27-c0f3b51feef2",
+          "name": "Get file from the external person",
+          "request": {
+            "name": "Get file from the external person",
+            "description": {
+              "content": "Get file from the external person",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                ":uuid",
+                "files",
+                ":fileId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "uuid",
+                  "description": "(Required) UUID of the external person"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "fileId",
+                  "description": "(Required) File id "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c5f26212-15d4-444c-b1e6-613f7ea9689a",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid",
+                    "files",
+                    ":fileId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the external person"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "fileId",
+                      "description": "(Required) File id "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0bdde24d-4c4a-411d-9b16-2f765d364c8d",
+          "name": "Lists notes",
+          "request": {
+            "name": "Lists notes",
+            "description": {
+              "content": "Lists notes associated with an external person ordered by date (nulls last)",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                ":uuid",
+                "notes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "10",
+                  "description": "Number of returned notes per request"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "The offset for the returned list. 0 or null value is from the start"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "uuid",
+                  "description": "(Required) UUID of the external person to get notes for"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2ab7c379-eec6-4fa8-b701-7975f55c059e",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid",
+                    "notes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "size",
+                      "value": "10"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the external person to get notes for"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"count\": 8859,\n  \"pageInformation\": {\n    \"offset\": 4265,\n    \"size\": 3942\n  },\n  \"items\": [\n    {\n      \"text\": \"string\",\n      \"date\": \"1983-02-20T08:10:10.987Z\",\n      \"username\": \"string\"\n    },\n    {\n      \"text\": \"string\",\n      \"date\": \"2024-03-28T10:39:37.045Z\",\n      \"username\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f7874f2f-9de4-4f83-b158-3b50a3ab1dec",
+              "name": "External person not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid",
+                    "notes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "size",
+                      "value": "10"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the external person to get notes for"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 7657,\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "af9b3822-6500-4895-b07c-e4acfb743de1",
+          "name": "Create note",
+          "request": {
+            "name": "Create note",
+            "description": {
+              "content": "Create note and associate it with an external person",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "external-persons",
+                ":uuid",
+                "notes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "uuid",
+                  "description": "(Required) UUID of the external person to add note to"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"text\": \"<string>\",\n  \"date\": \"<dateTime>\",\n  \"username\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0872bb53-0ade-49c5-a16f-92a31d6dc15c",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid",
+                    "notes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the external person to add note to"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"text\": \"<string>\",\n  \"date\": \"<dateTime>\",\n  \"username\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"text\": \"<string>\",\n  \"date\": \"<dateTime>\",\n  \"username\": \"<string>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "90fb3ca5-00a3-43bd-aa50-ef2db272a375",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "external-persons",
+                    ":uuid",
+                    "notes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "uuid",
+                      "description": "(Required) UUID of the external person to add note to"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"text\": \"<string>\",\n  \"date\": \"<dateTime>\",\n  \"username\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 7657,\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/ws/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "d3f19a61-e605-44d1-b919-1d4d2ea1e962",
+    "name": "Pure activity externalPerson API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Pure API provides a secure and complete web services API for using and managing research information data in Pure. The API enables a broad range of use-cases for interacting with research information, from anonymous Open Data scenarios to enabling the next generation Pure admin.\n\nContact Support:\n Email: pure-support@elsevier.com",
+      "type": "text/plain"
+    }
+  }
+}
