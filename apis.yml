@@ -55,7 +55,7 @@ artifacts:
     url: vocabulary/university-of-bath-vocabulary.yml
   - type: JSONLD
     url: json-ld/university-of-bath-context.jsonld
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: university-of-bath:pure-oai
   name: Research Portal (Pure) OAI-PMH
