@@ -145,6 +145,8 @@ apis:
   humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
   baseURL: https://purehost.bath.ac.uk/ws/oai
   tags:
+  - Activity
+  tags_raw:
   - activity
   properties:
   - type: OpenAPI
@@ -155,6 +157,8 @@ apis:
   humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
   baseURL: https://purehost.bath.ac.uk/ws/oai
   tags:
+  - Application
+  tags_raw:
   - application
   properties:
   - type: OpenAPI
@@ -165,7 +169,8 @@ apis:
     The authorCollaboration API from University of Bath — 9 operation(s) for authorcollaboration.
   humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
   baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
+  tags: []
+  tags_raw:
   - authorCollaboration
   properties:
   - type: OpenAPI
@@ -186,7 +191,8 @@ apis:
     The classificationScheme API from University of Bath — 7 operation(s) for classificationscheme.
   humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
   baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
+  tags: []
+  tags_raw:
   - classificationScheme
   properties:
   - type: OpenAPI
@@ -197,6 +203,8 @@ apis:
   humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
   baseURL: https://purehost.bath.ac.uk/ws/oai
   tags:
+  - Dataset
+  tags_raw:
   - dataSet
   properties:
   - type: OpenAPI
@@ -207,6 +215,8 @@ apis:
   humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
   baseURL: https://purehost.bath.ac.uk/ws/oai
   tags:
+  - Equipment
+  tags_raw:
   - equipment
   properties:
   - type: OpenAPI
@@ -217,6 +227,8 @@ apis:
   humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
   baseURL: https://purehost.bath.ac.uk/ws/oai
   tags:
+  - Event
+  tags_raw:
   - event
   properties:
   - type: OpenAPI
@@ -227,7 +239,8 @@ apis:
     The externalOrganization API from University of Bath — 29 operation(s) for externalorganization.
   humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
   baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
+  tags: []
+  tags_raw:
   - externalOrganization
   properties:
   - type: OpenAPI
@@ -237,7 +250,8 @@ apis:
   description: The externalPerson API from University of Bath — 22 operation(s) for externalperson.
   humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
   baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
+  tags: []
+  tags_raw:
   - externalPerson
   properties:
   - type: OpenAPI
@@ -258,6 +272,8 @@ apis:
   humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
   baseURL: https://purehost.bath.ac.uk/ws/oai
   tags:
+  - Organization
+  tags_raw:
   - organization
   properties:
   - type: OpenAPI
@@ -268,6 +284,8 @@ apis:
   humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
   baseURL: https://purehost.bath.ac.uk/ws/oai
   tags:
+  - Persons
+  tags_raw:
   - person
   properties:
   - type: OpenAPI
@@ -277,7 +295,8 @@ apis:
   description: The pressMedia API from University of Bath — 24 operation(s) for pressmedia.
   humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
   baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
+  tags: []
+  tags_raw:
   - pressMedia
   properties:
   - type: OpenAPI
@@ -298,6 +317,8 @@ apis:
   humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
   baseURL: https://purehost.bath.ac.uk/ws/oai
   tags:
+  - Project
+  tags_raw:
   - project
   properties:
   - type: OpenAPI
@@ -308,6 +329,8 @@ apis:
   humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
   baseURL: https://purehost.bath.ac.uk/ws/oai
   tags:
+  - Publishers
+  tags_raw:
   - publisher
   properties:
   - type: OpenAPI
@@ -317,7 +340,8 @@ apis:
   description: The researchOutput API from University of Bath — 66 operation(s) for researchoutput.
   humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
   baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
+  tags: []
+  tags_raw:
   - researchOutput
   properties:
   - type: OpenAPI
@@ -328,6 +352,8 @@ apis:
   humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
   baseURL: https://purehost.bath.ac.uk/ws/oai
   tags:
+  - Role
+  tags_raw:
   - role
   properties:
   - type: OpenAPI
@@ -337,7 +363,8 @@ apis:
   description: The studentThesis API from University of Bath — 26 operation(s) for studentthesis.
   humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
   baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
+  tags: []
+  tags_raw:
   - studentThesis
   properties:
   - type: OpenAPI
@@ -348,6 +375,8 @@ apis:
   humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
   baseURL: https://purehost.bath.ac.uk/ws/oai
   tags:
+  - User
+  tags_raw:
   - user
   properties:
   - type: OpenAPI
