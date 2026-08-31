@@ -1,118 +1,169 @@
 ---
 aid: university-of-bath
 name: University of Bath
+x-type: university
+x-category: Public Research University
 description: >-
-  The University of Bath is a public research university in Bath, United Kingdom,
-  ranked #150 in the QS World University Rankings 2025. Its public, machine-readable
-  developer footprint is centered on scholarly metadata rather than a commercial
-  developer program: an Elsevier Pure research portal exposing an OAI-PMH interface,
-  an EPrints 3.4 Research Data Archive with OAI-PMH and a REST interface, and an
-  Ex Libris Alma/Primo library discovery platform. The University operates an Azure
-  API Management developer portal, but the publicly reachable instance is a non-production
-  ("test") environment with no openly documented production APIs. Administrative and
-  identity services are gated behind institutional affiliation.
+  The University of Bath is a public research university in Bath, United Kingdom, and a member
+  of the Russell Group. It operates no public developer program: a full crawl of its 21,530-URL
+  sitemap on 2026-08-30 returned no developer portal, no API reference, and no published OpenAPI
+  under any bath.ac.uk path. Its one genuinely institution-operated machine-readable surface is
+  the Research Data Archive at researchdata.bath.ac.uk — EPrints 3.4.7 running on the University's
+  own infrastructure (138.38.44.144) — which serves a live OAI-PMH 2.0 interface, an EPrints
+  REST/XML interface, and DataCite kernel-4 records carrying ORCID identifiers and DOIs under the
+  University's own 10.15125 prefix. Everything else that appears to be a Bath API is a vendor
+  contract running under a Bath hostname: purehost.bath.ac.uk and researchportal.bath.ac.uk both
+  CNAME to bath-prod.elsevierpure.com and are an Elsevier Pure tenancy; the library catalogue is
+  an Ex Libris Alma/Primo tenancy; library.bath.ac.uk is Springshare LibGuides; status.bath.ac.uk
+  is Better Stack. The programme and unit catalogue is entirely behind CAS authentication at
+  auth.bath.ac.uk, and the student records system behind Microsoft Entra ID. An Azure API
+  Management portal exists only as a non-production "test" instance and is not recorded as a
+  surface. This profile is deliberately thin because the footprint is thin.
 type: Index
 deliveryModel:
-  model: saas
+  model: self-hosted
   open_source: false
-  commercial: true
-  callable_host: false
-  label: Hosted service · you call their endpoint
-  confidence: medium
-  source:
-  - openapi
-  - pricing
-  generated: '2026-08-28'
-  method: derived
-accessModel:
-  pricing: free
-  onboarding: self-serve
-  trial: false
-  try_now: true
-  public: false
-  label: Free · Self-serve signup
+  commercial: false
+  callable_host: true
+  label: Institution-operated repository endpoints · no commercial API product
   confidence: high
   source:
-  - plans
-  - authentication
-  generated: '2026-07-22'
-  method: derived
+  - probed
+  generated: '2026-08-30'
+  method: probed
+accessModel:
+  pricing: free
+  onboarding: none
+  trial: false
+  try_now: true
+  public: true
+  label: Free · Open harvesting endpoints · no signup
+  confidence: high
+  source:
+  - probed
+  generated: '2026-08-30'
+  method: probed
 position: Consumer
-access: 3rd-Party
+access: Public
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/university-of-bath.png
 url: https://raw.githubusercontent.com/api-evangelist/university-of-bath/refs/heads/main/apis.yml
 tags:
-  - Education
-  - Higher Education
   - University
+  - Higher Education
+  - Education
   - United Kingdom
-  - Research
+  - Russell Group
+  - Research Data
+  - Research Repository
   - Open Data
   - Library
-  - Metadata
-created: '2026-06-03'
-modified: '2026-06-03'
-artifacts:
-  - type: OpenAPI
-    url: openapi/university-of-bath-pure-api.yaml
-  - type: JSONSchema
-    url: json-schema/
-  - type: JSONStructure
-    url: json-structure/
-  - type: Examples
-    url: examples/
-  - type: Rules
-    url: rules/university-of-bath-rules.yml
-  - type: Vocabulary
-    url: vocabulary/university-of-bath-vocabulary.yml
-  - type: JSONLD
-    url: json-ld/university-of-bath-context.jsonld
-specificationVersion: '0.23'
-apis:
-- aid: university-of-bath:pure-oai
-  name: Research Portal (Pure) OAI-PMH
-  description: >-
-    OAI-PMH 2.0 metadata harvesting interface for the University of Bath Open Access Repository, served
-    by the institution's Elsevier Pure research information system. Confirmed live via the Identify verb
-    (Pure 5.33.3-3, earliest datestamp November 2014).
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
-  - Research
-  - Metadata
   - OAI-PMH
-  - Repository
-  - Pure
-  properties:
-  - type: Documentation
-    url: https://www.bath.ac.uk/guides/overview-of-pure/
+  - Metadata
+  - Research Computing
+created: '2026-06-03'
+modified: '2026-08-30'
+x-ror: https://ror.org/002h8g185
+x-doi-prefix: '10.15125'
+artifacts:
+  - type: Conformance
+    url: conformance/university-of-bath-conformance.yml
+x-enrichment:
+  pipeline: pipeline-university.md
+  run: '2026-08-30'
+  note: >-
+    Re-profiled under the operator axis. The June 2026 profile credited this institution with 21
+    OpenAPI definitions and 43 collections, plus schemas, structures, examples, rulesets, a
+    vocabulary, a JSON-LD context, an authentication profile, an agentic-access profile and a
+    capability map — every one of them derived from a single Elsevier Pure contract
+    (info.title "Pure API", info.contact pure-support@elsevier.com, servers [/ws/api]) that nine
+    other institutions in this cohort ship verbatim. 88 files were removed. The Pure deployment
+    itself is kept, correctly labelled as a tenant relationship. Expect this repo's score to fall;
+    the previous number was Elsevier's engineering, not Bath's.
+x-coverage:
+  state: covered
+  reason: covered
+  detail: >-
+    Bath operates exactly one institution-owned programmable surface and it was fully probed:
+    the researchdata.bath.ac.uk EPrints Research Data Archive, whose OAI-PMH endpoint answers
+    Identify, ListMetadataFormats and ListRecords, and whose DataCite payload carries real DOIs
+    and ORCID iDs. Four further surfaces exist and are recorded as tenant relationships, not as
+    Bath's contracts. Three things could not be resolved and are named rather than assumed:
+    (1) idp.bath.ac.uk did not answer on 443 from this network across two attempts, and
+    metadata.ukfederation.org.uk was equally unreachable, so Bath's UK Access Management
+    Federation / eduGAIN entry — the one class this cohort most often misses — is unconfirmed;
+    (2) the programme and unit catalogue at www.bath.ac.uk/catalogues/ redirects to CAS at
+    auth.bath.ac.uk and is not publicly readable; (3) status.bath.ac.uk answers /api/v2/status.json
+    with 200 but returns text/html of the same byte length as its homepage — a soft-404 SPA shell,
+    not a status API, and it is not credited.
+  evidence:
+    - url: https://researchdata.bath.ac.uk/cgi/oai2?verb=Identify
+      status: 200
+    - url: https://researchdata.bath.ac.uk/cgi/oai2?verb=ListRecords&metadataPrefix=oai_datacite
+      status: 200
+    - url: https://researchdata.bath.ac.uk/rest/
+      status: 200
+    - url: https://purehost.bath.ac.uk/ws/oai?verb=ListMetadataFormats
+      status: 200
+    - url: https://purehost.bath.ac.uk/ws/oai?verb=Identify
+      status: 500
+    - url: https://purehost.bath.ac.uk/ws/api/524/openapi.yaml
+      status: 401
+    - url: https://bath.primo.exlibrisgroup.com/
+      status: 200
+    - url: https://www.bath.ac.uk/sitemap.xml
+      status: 200
+    - url: https://www.bath.ac.uk/llms.txt
+      status: 404
+    - url: https://www.bath.ac.uk/.well-known/security.txt
+      status: 404
+    - url: https://www.bath.ac.uk/catalogues/
+      status: 200
+    - url: https://idp.bath.ac.uk/idp/shibboleth
+      status: 0
+    - url: https://status.bath.ac.uk/api/v2/status.json
+      status: 200
+apis:
 - aid: university-of-bath:researchdata-oai
   name: Research Data Archive OAI-PMH
+  x-operator: institution
   description: >-
-    OAI-PMH 2.0 metadata harvesting endpoint for the University of Bath Research Data Archive, an EPrints
-    3.4 institutional data repository. Confirmed live; the archive footer advertises OAI 2.0 support at
-    this base URL.
+    OAI-PMH 2.0 metadata harvesting interface for the University of Bath Research Data Archive,
+    an EPrints 3.4.7 repository the University runs on its own infrastructure
+    (researchdata.bath.ac.uk resolves through researchdata-1.bath.ac.uk to 138.38.44.144, inside
+    Bath's own address space). Confirmed live 2026-08-30: Identify returns repositoryName
+    "University of Bath Research Data Archive", adminEmail research-data@bath.ac.uk, earliest
+    datestamp 2022-03-21. Seven metadata prefixes are advertised — didl, mets, oai_bibl,
+    oai_datacite, oai_dc, rdf, uketd_dc. This is the one surface in this repo whose contract and
+    operation are both the institution's.
   humanURL: https://researchdata.bath.ac.uk/
   baseURL: https://researchdata.bath.ac.uk/cgi/oai2
   tags:
-  - Research
+  - Research Data
   - Open Data
   - OAI-PMH
   - Repository
   - EPrints
+  - DataCite
+  - ORCID
   properties:
   - type: Documentation
     url: https://researchdata.bath.ac.uk/
+  - type: Conformance
+    url: conformance/university-of-bath-conformance.yml
 - aid: university-of-bath:researchdata-rest
-  name: Research Data Archive REST/Feeds
+  name: Research Data Archive REST/XML
+  x-operator: institution
   description: >-
-    EPrints REST/XML interface and Atom/RSS feeds for the University of Bath Research Data Archive, exposing
-    dataset records and search. The /rest path resolves (HTTP 200); EPrints provides RSS 1.0, RSS 2.0
-    and Atom feeds.
+    EPrints REST/XML interface for the University of Bath Research Data Archive, on the same
+    institution-operated host. Confirmed live 2026-08-30: /rest/ returns an "EPrints REST:
+    Datasets" index exposing the eprint, user and subject datasets. The interface is EPrints
+    open-source software, deployed and run by the University rather than consumed as a hosted
+    service, so both the host and the operation are Bath's. No OpenAPI is published for it and
+    none is generated here.
   humanURL: https://researchdata.bath.ac.uk/
   baseURL: https://researchdata.bath.ac.uk/rest
   tags:
-  - Research
+  - Research Data
   - Open Data
   - REST
   - Repository
@@ -120,12 +171,61 @@ apis:
   properties:
   - type: Documentation
     url: https://researchdata.bath.ac.uk/
-- aid: university-of-bath:primo-discovery
-  name: Library Discovery (Ex Libris Primo)
+- aid: university-of-bath:pure-ws-api
+  name: Research Portal (Elsevier Pure) Web Service — Bath tenancy
+  x-operator: tenant
   description: >-
-    The University of Bath library catalogue runs on Ex Libris Alma with the Primo discovery service.
-    Primo VE exposes search/discovery interfaces (Primo REST/Search APIs) typically requiring an Ex Libris
-    API key; the public Primo front end at bath.primo.exlibrisgroup.com resolves (HTTP 200).
+    The University's Elsevier Pure research information system exposes the Pure Web Service under
+    a Bath hostname. The DEPLOYMENT is Bath's and the data is Bath's; the CONTRACT is Elsevier's.
+    purehost.bath.ac.uk CNAMEs to bath-prod.elsevierpure.com and then eu.prod.elsevierpure.com, and
+    the OpenAPI it serves is titled "Pure API" with contact pure-support@elsevier.com and a relative
+    server of /ws/api — the identical document nine other institutions in this cohort also shipped
+    as their own. Confirmed live 2026-08-30: the documentation index returns 200 and
+    /ws/api/524/openapi.yaml returns 401 "Please provide a valid API key for access". The contract
+    is deliberately NOT stored in this repo; it belongs to Elsevier Pure.
+  humanURL: https://purehost.bath.ac.uk/ws/api/documentation/index.html
+  baseURL: https://purehost.bath.ac.uk/ws/api
+  tags:
+  - Research
+  - Metadata
+  - Pure
+  - Elsevier
+  - Tenant
+  - Gated
+  properties:
+  - type: Documentation
+    url: https://purehost.bath.ac.uk/ws/api/documentation/index.html
+- aid: university-of-bath:pure-oai
+  name: Research Portal (Elsevier Pure) OAI-PMH — Bath tenancy
+  x-operator: tenant
+  description: >-
+    OAI-PMH 2.0 harvesting interface served by the University's Elsevier Pure tenancy, advertising
+    the OpenAIRE CERIF 1.2 profile alongside mods, qdc, nl_didl, oai_dc, xmetadiss and uketd_dc.
+    Live but DEFECTIVE as of 2026-08-30: ListMetadataFormats and ListRecords return 200, while the
+    mandatory Identify verb returns an Elsevier HTML 500 page. The June 2026 profile of this repo
+    recorded Identify as confirmed live (Pure 5.33.3-3); it is not live now, which is why this
+    pipeline probes verbs rather than base URLs.
+  humanURL: https://www.bath.ac.uk/services/pure/
+  baseURL: https://purehost.bath.ac.uk/ws/oai
+  tags:
+  - Research
+  - Metadata
+  - OAI-PMH
+  - Pure
+  - Elsevier
+  - Tenant
+  properties:
+  - type: Documentation
+    url: https://www.bath.ac.uk/guides/overview-of-pure/
+- aid: university-of-bath:primo-discovery
+  name: Library Discovery (Ex Libris Alma/Primo) — Bath tenancy
+  x-operator: tenant
+  description: >-
+    The University of Bath library catalogue runs on Ex Libris Alma with Primo VE discovery. The
+    public front end at bath.primo.exlibrisgroup.com redirects to the Bath view
+    (vid=44BAT_INST:NDE) and returns 200. The host is Ex Libris's, the view is Bath's, and the
+    programmatic Primo/Alma REST APIs are Ex Libris's contract behind an Ex Libris API key —
+    they are not published under this institution.
   humanURL: https://www.bath.ac.uk/guides/using-the-library-catalogue/
   baseURL: https://bath.primo.exlibrisgroup.com/
   tags:
@@ -134,283 +234,45 @@ apis:
   - Primo
   - Alma
   - Ex Libris
+  - Tenant
   properties:
   - type: Documentation
     url: https://www.bath.ac.uk/guides/using-the-library-catalogue/
-- aid: university-of-bath:apim-portal
-  name: Azure API Management Developer Portal (non-production)
-  description: >-
-    The University operates a Microsoft Azure API Management developer portal. The publicly reachable
-    instance is a non-production "test" environment (portal.apim.test.bath.ac.uk, HTTP 200) with sign-in/sign-up
-    but no openly documented production APIs. Listed for transparency; no production endpoints are confirmed.
-  humanURL: https://portal.apim.test.bath.ac.uk/
-  tags:
-  - Developer Portal
-  - Azure APIM
-  - Gated
-  properties:
-  - type: Documentation
-    url: https://portal.apim.test.bath.ac.uk/
-- aid: university-of-bath:university-of-bath-activity-api
-  name: University of Bath activity API
-  description: The activity API from University of Bath — 38 operation(s) for activity.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
-  - Activity
-  tags_raw:
-  - activity
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-activity-api-openapi.yml
-- aid: university-of-bath:university-of-bath-application-api
-  name: University of Bath application API
-  description: The application API from University of Bath — 36 operation(s) for application.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
-  - Application
-  tags_raw:
-  - application
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-application-api-openapi.yml
-- aid: university-of-bath:university-of-bath-authorcollaboration-api
-  name: University of Bath authorCollaboration API
-  description: >-
-    The authorCollaboration API from University of Bath — 9 operation(s) for authorcollaboration.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags: []
-  tags_raw:
-  - authorCollaboration
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-authorcollaboration-api-openapi.yml
-- aid: university-of-bath:university-of-bath-award-api
-  name: University of Bath award API
-  description: The award API from University of Bath — 35 operation(s) for award.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
-  - award
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-award-api-openapi.yml
-- aid: university-of-bath:university-of-bath-classificationscheme-api
-  name: University of Bath classificationScheme API
-  description: >-
-    The classificationScheme API from University of Bath — 7 operation(s) for classificationscheme.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags: []
-  tags_raw:
-  - classificationScheme
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-classificationscheme-api-openapi.yml
-- aid: university-of-bath:university-of-bath-dataset-api
-  name: University of Bath dataSet API
-  description: The dataSet API from University of Bath — 29 operation(s) for dataset.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
-  - Dataset
-  tags_raw:
-  - dataSet
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-dataset-api-openapi.yml
-- aid: university-of-bath:university-of-bath-equipment-api
-  name: University of Bath equipment API
-  description: The equipment API from University of Bath — 26 operation(s) for equipment.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
-  - Equipment
-  tags_raw:
-  - equipment
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-equipment-api-openapi.yml
-- aid: university-of-bath:university-of-bath-event-api
-  name: University of Bath event API
-  description: The event API from University of Bath — 21 operation(s) for event.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
-  - Event
-  tags_raw:
-  - event
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-event-api-openapi.yml
-- aid: university-of-bath:university-of-bath-externalorganization-api
-  name: University of Bath externalOrganization API
-  description: >-
-    The externalOrganization API from University of Bath — 29 operation(s) for externalorganization.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags: []
-  tags_raw:
-  - externalOrganization
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-externalorganization-api-openapi.yml
-- aid: university-of-bath:university-of-bath-externalperson-api
-  name: University of Bath externalPerson API
-  description: The externalPerson API from University of Bath — 22 operation(s) for externalperson.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags: []
-  tags_raw:
-  - externalPerson
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-externalperson-api-openapi.yml
-- aid: university-of-bath:university-of-bath-journal-api
-  name: University of Bath journal API
-  description: The journal API from University of Bath — 22 operation(s) for journal.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
-  - journal
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-journal-api-openapi.yml
-- aid: university-of-bath:university-of-bath-organization-api
-  name: University of Bath organization API
-  description: The organization API from University of Bath — 33 operation(s) for organization.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
-  - Organization
-  tags_raw:
-  - organization
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-organization-api-openapi.yml
-- aid: university-of-bath:university-of-bath-person-api
-  name: University of Bath person API
-  description: The person API from University of Bath — 57 operation(s) for person.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
-  - Persons
-  tags_raw:
-  - person
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-person-api-openapi.yml
-- aid: university-of-bath:university-of-bath-pressmedia-api
-  name: University of Bath pressMedia API
-  description: The pressMedia API from University of Bath — 24 operation(s) for pressmedia.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags: []
-  tags_raw:
-  - pressMedia
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-pressmedia-api-openapi.yml
-- aid: university-of-bath:university-of-bath-prize-api
-  name: University of Bath prize API
-  description: The prize API from University of Bath — 28 operation(s) for prize.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
-  - prize
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-prize-api-openapi.yml
-- aid: university-of-bath:university-of-bath-project-api
-  name: University of Bath project API
-  description: The project API from University of Bath — 33 operation(s) for project.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
-  - Project
-  tags_raw:
-  - project
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-project-api-openapi.yml
-- aid: university-of-bath:university-of-bath-publisher-api
-  name: University of Bath publisher API
-  description: The publisher API from University of Bath — 18 operation(s) for publisher.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
-  - Publishers
-  tags_raw:
-  - publisher
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-publisher-api-openapi.yml
-- aid: university-of-bath:university-of-bath-researchoutput-api
-  name: University of Bath researchOutput API
-  description: The researchOutput API from University of Bath — 66 operation(s) for researchoutput.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags: []
-  tags_raw:
-  - researchOutput
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-researchoutput-api-openapi.yml
-- aid: university-of-bath:university-of-bath-role-api
-  name: University of Bath role API
-  description: The role API from University of Bath — 2 operation(s) for role.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
-  - Role
-  tags_raw:
-  - role
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-role-api-openapi.yml
-- aid: university-of-bath:university-of-bath-studentthesis-api
-  name: University of Bath studentThesis API
-  description: The studentThesis API from University of Bath — 26 operation(s) for studentthesis.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags: []
-  tags_raw:
-  - studentThesis
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-studentthesis-api-openapi.yml
-- aid: university-of-bath:university-of-bath-user-api
-  name: University of Bath user API
-  description: The user API from University of Bath — 7 operation(s) for user.
-  humanURL: https://www.bath.ac.uk/guides/overview-of-pure/
-  baseURL: https://purehost.bath.ac.uk/ws/oai
-  tags:
-  - User
-  tags_raw:
-  - user
-  properties:
-  - type: OpenAPI
-    url: openapi/university-of-bath-user-api-openapi.yml
 common:
-  - type: CapabilityMap
-    url: capabilities/university-of-bath-capability-edges.yml
-    name: University of Bath Business Capability Map
-  - type: AgenticAccess
-    url: agentic-access/university-of-bath-agentic-access.yml
-  - type: DomainSecurity
-    url: security/university-of-bath-domain-security.yml
-  - type: Authentication
-    url: authentication/university-of-bath-authentication.yml
   - type: Website
     url: https://www.bath.ac.uk/
-  - type: GitHub
+  - type: GitHubOrganization
     url: https://github.com/uniofbathdmc
   - type: LinkedIn
     url: https://www.linkedin.com/school/university-of-bath/
-  - type: DeveloperPortal
-    url: https://portal.apim.test.bath.ac.uk/
+  - type: ResearchRepository
+    url: https://researchdata.bath.ac.uk/
+  - type: ResearchRepository
+    url: https://researchportal.bath.ac.uk/
+  - type: LibraryCatalog
+    url: https://library.bath.ac.uk/home
+  - type: CourseCatalog
+    url: https://www.bath.ac.uk/courses/
+  - type: OpenData
+    url: https://www.bath.ac.uk/topics/open-research/
+  - type: ResearchComputing
+    url: https://www.bath.ac.uk/professional-services/research-computing/
+  - type: AIPolicy
+    url: https://www.bath.ac.uk/guides/student-guidance-on-uploading-documents-to-genai-tools-or-third-party-websites/
+  - type: AITooling
+    url: https://www.bath.ac.uk/announcements/support-for-students-to-use-genai-tools-effectively-and-responsibly/
+  - type: PrivacyPolicy
+    url: https://www.bath.ac.uk/legal-information/data-protection-and-privacy-statement-summary/
+  - type: TermsOfService
+    url: https://www.bath.ac.uk/legal-information/digital-accessibility-policy/
+  - type: Documentation
+    url: https://www.bath.ac.uk/services/pure/
+  - type: Status
+    url: https://status.bath.ac.uk/
+  - type: Conformance
+    url: conformance/university-of-bath-conformance.yml
+  - type: DomainSecurity
+    url: security/university-of-bath-domain-security.yml
   - type: Plans
     url: plans/university-of-bath-plans-pricing.yml
   - type: RateLimits
