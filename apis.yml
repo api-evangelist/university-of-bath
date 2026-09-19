@@ -190,6 +190,13 @@ apis:
   - Metadata
   - Pure
   - Elsevier
+  - Tenants
+  - Gated
+  tags_raw:
+  - Research
+  - Metadata
+  - Pure
+  - Elsevier
   - Tenant
   - Gated
   properties:
@@ -213,6 +220,13 @@ apis:
   - OAI-PMH
   - Pure
   - Elsevier
+  - Tenants
+  tags_raw:
+  - Research
+  - Metadata
+  - OAI-PMH
+  - Pure
+  - Elsevier
   - Tenant
   properties:
   - type: Documentation
@@ -229,6 +243,13 @@ apis:
   humanURL: https://www.bath.ac.uk/guides/using-the-library-catalogue/
   baseURL: https://bath.primo.exlibrisgroup.com/
   tags:
+  - Library
+  - Discovery
+  - Primo
+  - Alma
+  - Ex Libris
+  - Tenants
+  tags_raw:
   - Library
   - Discovery
   - Primo
