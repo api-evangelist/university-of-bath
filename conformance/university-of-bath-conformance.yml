@@ -1,0 +1,135 @@
+---
+# authorship: written by the API Evangelist university pipeline (pipeline-university.md),
+# 2026-08-30. Every claim below was probed live on the date shown; nothing here is
+# inferred from a prose claim on a web page. REWARD-ONLY: standards that could not be
+# confirmed against a live response are recorded under `not_confirmed`, never asserted.
+specification: API Commons Conformance
+specificationVersion: '0.1'
+provider: University of Bath
+providerId: university-of-bath
+generated: '2026-08-30'
+method: probed
+source: >-
+  Live HTTP probes of University of Bath endpoints, 2026-08-30. Regime: Kin Score
+  `education` (triggered by the University / Higher Education tags).
+regime: education
+description: >-
+  Domain-standard conformance for the University of Bath, read from live responses rather
+  than from documentation. The confirmed hits all sit on ONE endpoint the institution
+  actually operates on its own infrastructure — researchdata.bath.ac.uk, an EPrints 3.4.7
+  Research Data Archive resolving to 138.38.44.144 inside the University's own IP
+  allocation. A second OAI-PMH responder exists at purehost.bath.ac.uk, but that host
+  CNAMEs to bath-prod.elsevierpure.com and is an Elsevier Pure tenancy, so its conformance
+  is Elsevier's engineering and is recorded as tenant-operated, not credited here.
+
+conformance:
+
+  - standard: oai-pmh
+    name: Open Archives Initiative Protocol for Metadata Harvesting 2.0
+    status: confirmed
+    operator: institution
+    endpoint: https://researchdata.bath.ac.uk/cgi/oai2
+    evidence:
+      - url: https://researchdata.bath.ac.uk/cgi/oai2?verb=Identify
+        status: 200
+        note: >-
+          Returned a valid OAI-PMH Identify response — repositoryName "University of Bath
+          Research Data Archive", protocolVersion 2.0, adminEmail research-data@bath.ac.uk,
+          earliestDatestamp 2022-03-21T17:02:44Z, repositoryIdentifier researchdata.bath.ac.uk,
+          software EPrints 3.4.7.
+      - url: https://researchdata.bath.ac.uk/cgi/oai2?verb=ListMetadataFormats
+        status: 200
+        note: >-
+          Seven metadata prefixes advertised: didl, mets, oai_bibl, oai_datacite, oai_dc,
+          rdf, uketd_dc.
+    probed: '2026-08-30'
+
+  - standard: datacite
+    name: DataCite Metadata Schema (kernel-4) + DataCite DOI registration
+    status: confirmed
+    operator: institution
+    endpoint: https://researchdata.bath.ac.uk/cgi/oai2?verb=ListRecords&metadataPrefix=oai_datacite
+    evidence:
+      - url: https://researchdata.bath.ac.uk/cgi/oai2?verb=ListRecords&metadataPrefix=oai_datacite
+        status: 200
+        note: >-
+          815 KB of live records serialised against http://datacite.org/schema/kernel-4,
+          carrying real minted DOIs under the University's own prefix 10.15125
+          (e.g. 10.15125/BATH-00064).
+      - url: https://api.datacite.org/providers/ioop
+        status: 200
+        note: >-
+          DataCite lists "University of Bath" as provider id `ioop`, memberType
+          consortium_organization, website https://library.bath.ac.uk/home — an
+          institutional DOI-minting membership, not a vendor's.
+    probed: '2026-08-30'
+
+  - standard: orcid
+    name: ORCID persistent researcher identifiers
+    status: confirmed
+    operator: institution
+    endpoint: https://researchdata.bath.ac.uk/cgi/oai2?verb=ListRecords&metadataPrefix=oai_datacite
+    evidence:
+      - url: https://researchdata.bath.ac.uk/cgi/oai2?verb=ListRecords&metadataPrefix=oai_datacite
+        status: 200
+        note: >-
+          Creator records carry ORCID iDs as typed name identifiers, e.g.
+          <nameIdentifier schemeURI="https://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0003-1107-8498</nameIdentifier>.
+          ORCID is emitted in the machine-readable payload, not merely displayed in a UI.
+    probed: '2026-08-30'
+
+# Recorded for completeness. NOT counted as conformance — the endpoint runs on Elsevier's
+# infrastructure under a Bath hostname, so the standard is implemented by the vendor.
+tenant_conformance:
+  - standard: oai-pmh
+    name: OAI-PMH 2.0 with the OpenAIRE CERIF 1.2 profile
+    operator: tenant
+    endpoint: https://purehost.bath.ac.uk/ws/oai
+    vendor: Elsevier Pure
+    evidence:
+      - url: https://purehost.bath.ac.uk/ws/oai?verb=ListMetadataFormats
+        status: 200
+        note: >-
+          Seven prefixes: mods, qdc, oai_cerif_openaire, nl_didl, oai_dc, xmetadiss,
+          uketd_dc. The OpenAIRE CERIF 1.2 profile is declared in the response envelope.
+      - url: https://purehost.bath.ac.uk/ws/oai?verb=Identify
+        status: 500
+        note: >-
+          DEFECT, found 2026-08-30. The mandatory Identify verb returns an Elsevier HTML
+          500 page, while every other verb answers correctly. The June 2026 profile of this
+          repo recorded Identify as confirmed live (Pure 5.33.3-3); it is not live now.
+          This is why the pipeline probes status codes rather than link presence.
+      - url: https://purehost.bath.ac.uk
+        status: 200
+        note: CNAME chain bath-prod.elsevierpure.com -> eu.prod.elsevierpure.com (Cloudflare).
+
+not_confirmed:
+  # Present in the `education` regime standards[] but NOT observed on any live University of
+  # Bath surface. Listed so a later run does not re-derive the same negative, and so no
+  # reader mistakes silence for a gap that was never probed.
+  - standard: shibboleth
+    reason: >-
+      idp.bath.ac.uk did not answer on 443 from this network (connection timed out at 20s,
+      twice), and metadata.ukfederation.org.uk was equally unreachable, so the University's
+      UK Access Management Federation / eduGAIN entry could not be retrieved or confirmed.
+      Bath is near-certainly federated; this run has no evidence, so it claims none.
+  - standard: saml
+    reason: Same as shibboleth — the IdP metadata endpoint was unreachable from this network.
+  - standard: scim
+    reason: No SCIM endpoint discovered on any bath.ac.uk host.
+  - standard: lti
+    reason: >-
+      Bath runs Moodle (moodle.bath.ac.uk, referenced across www.bath.ac.uk) which supports
+      LTI, but no LTI registration or platform configuration is publicly reachable.
+  - standard: oneroster
+    reason: Not observed.
+  - standard: ed-fi
+    reason: Not observed; Ed-Fi is a US K-12/state-agency standard with no UK HE footprint.
+  - standard: caliper
+    reason: Not observed.
+  - standard: qti
+    reason: Not observed.
+  - standard: crossref
+    reason: >-
+      Bath deposits datasets with DataCite (prefix 10.15125). No Crossref member prefix or
+      Crossref deposit surface was found under institutional control.
