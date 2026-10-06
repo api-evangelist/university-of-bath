@@ -61,7 +61,7 @@ tags:
   - Metadata
   - Research Computing
 created: '2026-06-03'
-modified: '2026-08-30'
+modified: '2026-10-06'
 x-ror: https://ror.org/002h8g185
 x-doi-prefix: '10.15125'
 artifacts:
@@ -260,6 +260,8 @@ apis:
   - type: Documentation
     url: https://www.bath.ac.uk/guides/using-the-library-catalogue/
 common:
+  - url: https://www.bath.ac.uk/jobs/RSS/rss.aspx
+    type: BlogRSS
   - type: Website
     url: https://www.bath.ac.uk/
   - type: GitHubOrganization
